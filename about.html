@@ -1,276 +1,330 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>天文班について - 屋代高校 天文班</title>
-  <meta name="description" content="屋代高校天文班の活動内容、設備、年間スケジュールをご紹介。60名の部員が活動する充実した天文部です。">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- 星空キャンバス -->
-  <canvas id="starfield"></canvas>
-  
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">屋代高校 天文班</a>
-      
-      <!-- ハンバーガーメニューボタン -->
-      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
-        ☰
-      </button>
-      
-      <!-- ナビゲーションメニュー -->
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">天文班紹介</a></li>
-          <li><a href="event.html">星空観測会</a></li>
-          <li><a href="archive.html">過去の記録</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <!-- メインコンテンツ -->
-  <main>
-    <section>
-      <h1 class="text-center text-accent mb-2">屋代高校 天文班について</h1>
-      
-      <!-- 概要 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">概要</h2>
-        <p>
-          屋代高校天文班は1970年の創部以来、50年以上にわたって星空への情熱を胸に活動を続けています。
-          現在約60名の部員が在籍し、初心者から経験者まで幅広いメンバーが天文活動を楽しんでいます。
-        </p>
-        <p>
-          「地域に開かれた天文部」をモットーに、学校での活動だけでなく、
-          地域の皆様との連携事業にも積極的に取り組んでいます。
-          毎月開催される星空観測会には多くの市民の方々にご参加いただいており、
-          天文の楽しさを共有する架け橋の役割を果たしています。
-        </p>
-        <p>
-          初心者の方も大歓迎です。天文に関する予備知識は一切必要ありません。
-          先輩部員や顧問の先生が丁寧に指導しますので、安心してご参加ください。
-        </p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天文班について - 屋代高校 天文班</title>
+    <meta
+      name="description"
+      content="屋代高校天文班の活動内容、設備、年間スケジュールをご紹介。60名の部員が活動する充実した天文部です。"
+    />
+
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "wrj8jhe",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 星空キャンバス -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">屋代高校 天文班</a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button
+          class="menu-toggle"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <!-- ナビゲーションメニュー -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">天文班紹介</a></li>
+            <li><a href="event.html">星空観測会</a></li>
+            <li><a href="archive.html">過去の記録</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
       </div>
-      
-      <!-- 主な活動 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">主な活動</h2>
-        <ul style="margin-left: 1.5rem; margin-top: 1rem;">
-          <li><strong>月例天文合宿</strong> - 毎月第3土曜日に学校天文ドームで実施</li>
-          <li><strong>夏季戸隠合宿</strong> - 年に一度の大型合宿（7月下旬）</li>
-          <li><strong>星空観測会運営</strong> - 一般市民向けイベントの企画・運営</li>
-          <li><strong>鳩祭展示</strong> - 学園祭での天文展示・プラネタリウム上映</li>
-          <li><strong>天体写真撮影</strong> - デジタル一眼レフによる本格的な撮影</li>
-          <li><strong>研究発表</strong> - 県高校文化祭での研究成果発表</li>
-          <li><strong>地域交流事業</strong> - 小中学校への出張天文教室</li>
-        </ul>
-      </div>
-      
-      <!-- 設備 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">設備・機材</h2>
-        <div style="overflow-x: auto;">
-          <table>
-            <thead>
-              <tr>
-                <th>機材名</th>
-                <th>仕様</th>
-                <th>用途</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>天文ドーム</td>
-                <td>直径3.5m / 自動回転式</td>
-                <td>本格的な天体観測・撮影</td>
-              </tr>
-              <tr>
-                <td>主力望遠鏡</td>
-                <td>口径150mm 屈折式 / 赤道儀搭載</td>
-                <td>惑星・月面・星雲観測</td>
-              </tr>
-              <tr>
-                <td>ポータブル望遠鏡</td>
-                <td>口径80mm 屈折式 × 5台</td>
-                <td>合宿・観測会での機動的観測</td>
-              </tr>
-              <tr>
-                <td>双眼鏡</td>
-                <td>10×50mm × 10台</td>
-                <td>星座学習・彗星観測</td>
-              </tr>
-              <tr>
-                <td>デジタル一眼レフ</td>
-                <td>Canon EOS Kiss X9i × 3台</td>
-                <td>天体写真・タイムラプス撮影</td>
-              </tr>
-              <tr>
-                <td>プラネタリウム</td>
-                <td>メガスター投影機</td>
-                <td>学園祭・地域イベント</td>
-              </tr>
-            </tbody>
-          </table>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section>
+        <h1 class="text-center text-accent mb-2">屋代高校 天文班について</h1>
+
+        <!-- 概要 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">概要</h2>
+          <p>
+            屋代高校天文班は1970年の創部以来、50年以上にわたって星空への情熱を胸に活動を続けています。
+            現在約60名の部員が在籍し、初心者から経験者まで幅広いメンバーが天文活動を楽しんでいます。
+          </p>
+          <p>
+            「地域に開かれた天文部」をモットーに、学校での活動だけでなく、
+            地域の皆様との連携事業にも積極的に取り組んでいます。
+            毎月開催される星空観測会には多くの市民の方々にご参加いただいており、
+            天文の楽しさを共有する架け橋の役割を果たしています。
+          </p>
+          <p>
+            初心者の方も大歓迎です。天文に関する予備知識は一切必要ありません。
+            先輩部員や顧問の先生が丁寧に指導しますので、安心してご参加ください。
+          </p>
         </div>
-      </div>
-      
-      <!-- 年間スケジュール -->
-      <div class="card mb-2">
-        <h2 class="text-accent">年間スケジュール</h2>
-        <div class="schedule-container">
-          <div class="schedule-grid">
-            <div class="schedule-month">
-              <h4>4月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>新入部員歓迎会</li>
-                <li>春の星座観測</li>
-                <li>金星観測</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>5月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>市民観測会</li>
-                <li>木星観測</li>
-                <li>春合宿</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>6月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>月面観測</li>
-                <li>土星観測</li>
-                <li>天の川撮影</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>7月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>七夕観測会</li>
-                <li>戸隠夏合宿</li>
-                <li>天体写真展</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>8月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>ペルセウス座流星群</li>
-                <li>夏の大三角観測</li>
-                <li>市民天文教室</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>9月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>鳩祭準備</li>
-                <li>中秋の名月観測</li>
-                <li>秋の星座学習</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>10月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>鳩祭展示</li>
-                <li>プラネタリウム上映</li>
-                <li>火星観測</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>11月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>県文化祭発表</li>
-                <li>しし座流星群</li>
-                <li>冬の星座観測</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>12月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>ふたご座流星群</li>
-                <li>冬至特別観測</li>
-                <li>年末天文講座</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>1月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>新年観測会</li>
-                <li>冬合宿</li>
-                <li>オリオン座観測</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>2月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>卒業生送別会</li>
-                <li>冬の星座総集編</li>
-                <li>新年度準備</li>
-              </ul>
-            </div>
-            <div class="schedule-month">
-              <h4>3月</h4>
-              <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                <li>春分の日観測</li>
-                <li>活動記録整理</li>
-                <li>新入生勧誘準備</li>
-              </ul>
+
+        <!-- 主な活動 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">主な活動</h2>
+          <ul style="margin-left: 1.5rem; margin-top: 1rem">
+            <li>
+              <strong>月例天文合宿</strong> -
+              毎月第3土曜日に学校天文ドームで実施
+            </li>
+            <li>
+              <strong>夏季戸隠合宿</strong> - 年に一度の大型合宿（7月下旬）
+            </li>
+            <li>
+              <strong>星空観測会運営</strong> - 一般市民向けイベントの企画・運営
+            </li>
+            <li>
+              <strong>鳩祭展示</strong> - 学園祭での天文展示・プラネタリウム上映
+            </li>
+            <li>
+              <strong>天体写真撮影</strong> - デジタル一眼レフによる本格的な撮影
+            </li>
+            <li><strong>研究発表</strong> - 県高校文化祭での研究成果発表</li>
+            <li><strong>地域交流事業</strong> - 小中学校への出張天文教室</li>
+          </ul>
+        </div>
+
+        <!-- 設備 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">設備・機材</h2>
+          <div style="overflow-x: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>機材名</th>
+                  <th>仕様</th>
+                  <th>用途</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>天文ドーム</td>
+                  <td>直径3.5m / 自動回転式</td>
+                  <td>本格的な天体観測・撮影</td>
+                </tr>
+                <tr>
+                  <td>主力望遠鏡</td>
+                  <td>口径150mm 屈折式 / 赤道儀搭載</td>
+                  <td>惑星・月面・星雲観測</td>
+                </tr>
+                <tr>
+                  <td>ポータブル望遠鏡</td>
+                  <td>口径80mm 屈折式 × 5台</td>
+                  <td>合宿・観測会での機動的観測</td>
+                </tr>
+                <tr>
+                  <td>双眼鏡</td>
+                  <td>10×50mm × 10台</td>
+                  <td>星座学習・彗星観測</td>
+                </tr>
+                <tr>
+                  <td>デジタル一眼レフ</td>
+                  <td>Canon EOS Kiss X9i × 3台</td>
+                  <td>天体写真・タイムラプス撮影</td>
+                </tr>
+                <tr>
+                  <td>プラネタリウム</td>
+                  <td>メガスター投影機</td>
+                  <td>学園祭・地域イベント</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 年間スケジュール -->
+        <div class="card mb-2">
+          <h2 class="text-accent">年間スケジュール</h2>
+          <div class="schedule-container">
+            <div class="schedule-grid">
+              <div class="schedule-month">
+                <h4>4月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>新入部員歓迎会</li>
+                  <li>春の星座観測</li>
+                  <li>金星観測</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>5月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>市民観測会</li>
+                  <li>木星観測</li>
+                  <li>春合宿</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>6月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>月面観測</li>
+                  <li>土星観測</li>
+                  <li>天の川撮影</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>7月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>七夕観測会</li>
+                  <li>戸隠夏合宿</li>
+                  <li>天体写真展</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>8月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>ペルセウス座流星群</li>
+                  <li>夏の大三角観測</li>
+                  <li>市民天文教室</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>9月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>鳩祭準備</li>
+                  <li>中秋の名月観測</li>
+                  <li>秋の星座学習</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>10月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>鳩祭展示</li>
+                  <li>プラネタリウム上映</li>
+                  <li>火星観測</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>11月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>県文化祭発表</li>
+                  <li>しし座流星群</li>
+                  <li>冬の星座観測</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>12月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>ふたご座流星群</li>
+                  <li>冬至特別観測</li>
+                  <li>年末天文講座</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>1月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>新年観測会</li>
+                  <li>冬合宿</li>
+                  <li>オリオン座観測</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>2月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>卒業生送別会</li>
+                  <li>冬の星座総集編</li>
+                  <li>新年度準備</li>
+                </ul>
+              </div>
+              <div class="schedule-month">
+                <h4>3月</h4>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
+                  <li>春分の日観測</li>
+                  <li>活動記録整理</li>
+                  <li>新入生勧誘準備</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <!-- 入部案内 -->
-      <div class="card">
-        <h2 class="text-accent">入部をお考えの方へ</h2>
-        <p>
-          天文班では随時新入部員を募集しています。経験や知識は一切問いません。
-          「星が好き」「宇宙に興味がある」という気持ちがあれば大歓迎です。
-        </p>
-        <p>
-          まずは気軽に部活動見学にお越しください。毎週火曜日と金曜日の放課後、
-          天文ドームで活動しています。事前連絡は不要です。
-        </p>
-        <div class="text-center mt-2">
-          <a href="contact.html" class="btn primary">入部についてお問い合わせ</a>
-          <a href="event.html" class="btn secondary">観測会に参加してみる</a>
+
+        <!-- 入部案内 -->
+        <div class="card">
+          <h2 class="text-accent">入部をお考えの方へ</h2>
+          <p>
+            天文班では随時新入部員を募集しています。経験や知識は一切問いません。
+            「星が好き」「宇宙に興味がある」という気持ちがあれば大歓迎です。
+          </p>
+          <p>
+            まずは気軽に部活動見学にお越しください。毎週火曜日と金曜日の放課後、
+            天文ドームで活動しています。事前連絡は不要です。
+          </p>
+          <div class="text-center mt-2">
+            <a href="contact.html" class="btn primary"
+              >入部についてお問い合わせ</a
+            >
+            <a href="event.html" class="btn secondary">観測会に参加してみる</a>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer-content">
+        <h3 class="text-accent">屋代高校 天文班</h3>
+        <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
+
+        <!-- SNSアイコン（ダミーリンク） -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
+        </div>
+
+        <p class="mt-2">
+          <small>
+            © 2025 屋代高校 天文班 |
+            <a href="#privacy" style="color: var(--text-muted)"
+              >プライバシーポリシー</a
+            >
+            |
+            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
+          </small>
+        </p>
       </div>
-    </section>
-  </main>
-  
-  <!-- フッター -->
-  <footer>
-    <div class="footer-content">
-      <h3 class="text-accent">屋代高校 天文班</h3>
-      <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
-      
-      <!-- SNSアイコン（ダミーリンク） -->
-      <div class="social-links">
-        <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-        <a href="#" aria-label="YouTube" title="YouTube">📹</a>
-      </div>
-      
-      <p class="mt-2">
-        <small>
-          © 2025 屋代高校 天文班 |
-          <a href="#privacy" style="color: var(--text-muted);">プライバシーポリシー</a> |
-          <a href="#terms" style="color: var(--text-muted);">利用規約</a>
-        </small>
-      </p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript -->
-  <script src="js/stars.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/stars.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>

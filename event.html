@@ -1,226 +1,320 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>星空観測会 - 屋代高校 天文班</title>
-  <meta name="description" content="屋代高校天文ドームで開催する星空観測会のご案内。小中学生と保護者対象の天体観測イベントです。">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- 星空キャンバス -->
-  <canvas id="starfield"></canvas>
-  
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">屋代高校 天文班</a>
-      
-      <!-- ハンバーガーメニューボタン -->
-      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
-        ☰
-      </button>
-      
-      <!-- ナビゲーションメニュー -->
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">天文班紹介</a></li>
-          <li><a href="event.html">星空観測会</a></li>
-          <li><a href="archive.html">過去の記録</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <!-- メインコンテンツ -->
-  <main>
-    <section>
-      <h1 class="text-center text-accent mb-2">星空観測会 in 屋代高校 天文ドーム</h1>
-      
-      <!-- リード文 -->
-      <div class="card mb-2 text-center">
-        <h2 class="text-accent">宇宙への扉を開こう！</h2>
-        <p style="font-size: 1.1rem; margin: 1rem 0;">
-          屋代高校の本格的な天文ドームで、星空の美しさと宇宙の神秘を体験してみませんか？<br>
-          天文班の部員たちが、望遠鏡の使い方から星座の見つけ方まで、<br>
-          丁寧にご案内いたします。
-        </p>
-      </div>
-      
-      <!-- 基本情報 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">📅 開催情報</h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-          <div style="text-align: center; padding: 1rem; background: var(--card-alt); border-radius: 4px;">
-            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📅</div>
-            <strong>開催日時</strong><br>
-            2025年8月4日（土）<br>
-            18:00〜21:00
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--card-alt); border-radius: 4px;">
-            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">☔</div>
-            <strong>予備日</strong><br>
-            2025年8月11日（土）<br>
-            同時刻
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--card-alt); border-radius: 4px;">
-            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">👥</div>
-            <strong>対象・定員</strong><br>
-            小中学生+保護者<br>
-            定員30名
-          </div>
-          <div style="text-align: center; padding: 1rem; background: var(--card-alt); border-radius: 4px;">
-            <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💰</div>
-            <strong>参加費</strong><br>
-            800円（1家族）<br>
-            保険料込み
-          </div>
-        </div>
-      </div>
-      
-      <!-- プログラム -->
-      <div class="card mb-2">
-        <h2 class="text-accent">📋 当日のプログラム</h2>
-        <dl class="program">
-          <dt>18:00〜18:40</dt>
-          <dd>スライド講座「今夜の星空案内」
-            <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-              <li>夏の星座と神話</li>
-              <li>惑星の見つけ方</li>
-              <li>望遠鏡の使い方講座</li>
-            </ul>
-          </dd>
-          
-          <dt>18:40〜19:40</dt>
-          <dd>天文ドーム観測体験
-            <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-              <li>主力望遠鏡での惑星観測</li>
-              <li>星雲・星団の観測</li>
-              <li>月面クレーターの詳細観測</li>
-            </ul>
-          </dd>
-          
-          <dt>19:40〜20:30</dt>
-          <dd>屋外体験ブース
-            <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-              <li>双眼鏡での星座観測</li>
-              <li>天体写真撮影体験</li>
-              <li>星座早見盤の使い方</li>
-            </ul>
-          </dd>
-          
-          <dt>20:30〜21:00</dt>
-          <dd>質疑応答・アンケート記入
-            <ul style="margin-left: 1rem; margin-top: 0.5rem;">
-              <li>天文に関する質問タイム</li>
-              <li>記念写真撮影</li>
-              <li>次回イベントのご案内</li>
-            </ul>
-          </dd>
-        </dl>
-      </div>
-      
-      <!-- 申し込み -->
-      <div class="card mb-2 text-center">
-        <h2 class="text-accent">📝 参加申し込み</h2>
-        <p>下記フォームよりお申し込みください。先着順で定員になり次第締切となります。</p>
-        <div style="margin: 2rem 0;">
-          <a href="https://docs.google.com/forms/xxxxxxxx" target="_blank" class="btn primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-            🌟 参加申込フォーム
-          </a>
-        </div>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">
-          ※申し込み締切：開催日の3日前まで<br>
-          ※参加確定のご連絡は申し込み後2日以内にメールにてお送りします
-        </p>
-      </div>
-      
-      <!-- アクセス -->
-      <div class="card mb-2">
-        <h2 class="text-accent">🚗 アクセス・駐車場</h2>
-        <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093725!2d138.1234567!3d36.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA3JzI0LjQiTiAxMzjCsDA3JzI0LjQiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="屋代高校の地図">
-          </iframe>
-        </div>
-        <div style="margin-top: 1rem;">
-          <h3>🚃 公共交通機関</h3>
-          <ul style="margin-left: 1rem;">
-            <li><strong>しなの鉄道線「屋代駅」</strong>より徒歩12分</li>
-            <li><strong>長野電鉄屋代線「屋代駅」</strong>より徒歩12分</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>星空観測会 - 屋代高校 天文班</title>
+    <meta
+      name="description"
+      content="屋代高校天文ドームで開催する星空観測会のご案内。小中学生と保護者対象の天体観測イベントです。"
+    />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "wrj8jhe",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 星空キャンバス -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">屋代高校 天文班</a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button
+          class="menu-toggle"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <!-- ナビゲーションメニュー -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">天文班紹介</a></li>
+            <li><a href="event.html">星空観測会</a></li>
+            <li><a href="archive.html">過去の記録</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
-          
-          <h3 style="margin-top: 1rem;">🚗 お車でお越しの場合</h3>
-          <ul style="margin-left: 1rem;">
-            <li>上信越自動車道「坂城IC」より約15分</li>
-            <li><strong>駐車場：</strong>校内駐車場をご利用いただけます（無料）</li>
-            <li><strong>注意：</strong>夜間のため、安全運転にお気をつけください</li>
-          </ul>
-        </div>
+        </nav>
       </div>
-      
-      <!-- 安全対策・注意事項 -->
-      <div class="card">
-        <h2 class="text-accent">⚠️ 安全対策・注意事項</h2>
-        <h3>安全対策</h3>
-        <ul style="margin-left: 1rem;">
-          <li>参加者全員にスポーツ保険を適用（参加費に含む）</li>
-          <li>小学生は必ず保護者同伴でご参加ください</li>
-          <li>夜間のため、部員が校内各所で安全誘導を行います</li>
-          <li>緊急時の連絡体制を整備しています</li>
-        </ul>
-        
-        <h3 style="margin-top: 1rem;">持ち物・服装</h3>
-        <ul style="margin-left: 1rem;">
-          <li>動きやすい服装（夜間のため防寒対策をお願いします）</li>
-          <li>懐中電灯（赤いセロファンを貼ったもの推奨）</li>
-          <li>筆記用具（メモ用）</li>
-          <li>虫除けスプレー</li>
-        </ul>
-        
-        <h3 style="margin-top: 1rem;">悪天候時の対応</h3>
-        <p>
-          雨天・曇天の場合は予備日（8月11日）に延期します。
-          延期が決定した場合は、開催日前日の17時までにメールでご連絡いたします。
-          予備日も悪天候の場合は、室内でのプラネタリウム上映と天文講座に変更して実施いたします。
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section>
+        <h1 class="text-center text-accent mb-2">
+          星空観測会 in 屋代高校 天文ドーム
+        </h1>
+
+        <!-- リード文 -->
+        <div class="card mb-2 text-center">
+          <h2 class="text-accent">宇宙への扉を開こう！</h2>
+          <p style="font-size: 1.1rem; margin: 1rem 0">
+            屋代高校の本格的な天文ドームで、星空の美しさと宇宙の神秘を体験してみませんか？<br />
+            天文班の部員たちが、望遠鏡の使い方から星座の見つけ方まで、<br />
+            丁寧にご案内いたします。
+          </p>
+        </div>
+
+        <!-- 基本情報 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">📅 開催情報</h2>
+          <div
+            class="grid"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 1rem;
+              margin-top: 1rem;
+            "
+          >
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: var(--card-alt);
+                border-radius: 4px;
+              "
+            >
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem">📅</div>
+              <strong>開催日時</strong><br />
+              2025年8月4日（土）<br />
+              18:00〜21:00
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: var(--card-alt);
+                border-radius: 4px;
+              "
+            >
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem">☔</div>
+              <strong>予備日</strong><br />
+              2025年8月11日（土）<br />
+              同時刻
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: var(--card-alt);
+                border-radius: 4px;
+              "
+            >
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem">👥</div>
+              <strong>対象・定員</strong><br />
+              小中学生+保護者<br />
+              定員30名
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1rem;
+                background: var(--card-alt);
+                border-radius: 4px;
+              "
+            >
+              <div style="font-size: 1.5rem; margin-bottom: 0.5rem">💰</div>
+              <strong>参加費</strong><br />
+              800円（1家族）<br />
+              保険料込み
+            </div>
+          </div>
+        </div>
+
+        <!-- プログラム -->
+        <div class="card mb-2">
+          <h2 class="text-accent">📋 当日のプログラム</h2>
+          <dl class="program">
+            <dt>18:00〜18:40</dt>
+            <dd>
+              スライド講座「今夜の星空案内」
+              <ul style="margin-left: 1rem; margin-top: 0.5rem">
+                <li>夏の星座と神話</li>
+                <li>惑星の見つけ方</li>
+                <li>望遠鏡の使い方講座</li>
+              </ul>
+            </dd>
+
+            <dt>18:40〜19:40</dt>
+            <dd>
+              天文ドーム観測体験
+              <ul style="margin-left: 1rem; margin-top: 0.5rem">
+                <li>主力望遠鏡での惑星観測</li>
+                <li>星雲・星団の観測</li>
+                <li>月面クレーターの詳細観測</li>
+              </ul>
+            </dd>
+
+            <dt>19:40〜20:30</dt>
+            <dd>
+              屋外体験ブース
+              <ul style="margin-left: 1rem; margin-top: 0.5rem">
+                <li>双眼鏡での星座観測</li>
+                <li>天体写真撮影体験</li>
+                <li>星座早見盤の使い方</li>
+              </ul>
+            </dd>
+
+            <dt>20:30〜21:00</dt>
+            <dd>
+              質疑応答・アンケート記入
+              <ul style="margin-left: 1rem; margin-top: 0.5rem">
+                <li>天文に関する質問タイム</li>
+                <li>記念写真撮影</li>
+                <li>次回イベントのご案内</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+
+        <!-- 申し込み -->
+        <div class="card mb-2 text-center">
+          <h2 class="text-accent">📝 参加申し込み</h2>
+          <p>
+            下記フォームよりお申し込みください。先着順で定員になり次第締切となります。
+          </p>
+          <div style="margin: 2rem 0">
+            <a
+              href="https://docs.google.com/forms/xxxxxxxx"
+              target="_blank"
+              class="btn primary"
+              style="font-size: 1.1rem; padding: 1rem 2rem"
+            >
+              🌟 参加申込フォーム
+            </a>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.9rem">
+            ※申し込み締切：開催日の3日前まで<br />
+            ※参加確定のご連絡は申し込み後2日以内にメールにてお送りします
+          </p>
+        </div>
+
+        <!-- アクセス -->
+        <div class="card mb-2">
+          <h2 class="text-accent">🚗 アクセス・駐車場</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093725!2d138.1234567!3d36.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA3JzI0LjQiTiAxMzjCsDA3JzI0LjQiRQ!5e0!3m2!1sja!2sjp!4v1600000000000!5m2!1sja!2sjp"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="屋代高校の地図"
+            >
+            </iframe>
+          </div>
+          <div style="margin-top: 1rem">
+            <h3>🚃 公共交通機関</h3>
+            <ul style="margin-left: 1rem">
+              <li><strong>しなの鉄道線「屋代駅」</strong>より徒歩12分</li>
+              <li><strong>長野電鉄屋代線「屋代駅」</strong>より徒歩12分</li>
+            </ul>
+
+            <h3 style="margin-top: 1rem">🚗 お車でお越しの場合</h3>
+            <ul style="margin-left: 1rem">
+              <li>上信越自動車道「坂城IC」より約15分</li>
+              <li>
+                <strong>駐車場：</strong>校内駐車場をご利用いただけます（無料）
+              </li>
+              <li>
+                <strong>注意：</strong>夜間のため、安全運転にお気をつけください
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 安全対策・注意事項 -->
+        <div class="card">
+          <h2 class="text-accent">⚠️ 安全対策・注意事項</h2>
+          <h3>安全対策</h3>
+          <ul style="margin-left: 1rem">
+            <li>参加者全員にスポーツ保険を適用（参加費に含む）</li>
+            <li>小学生は必ず保護者同伴でご参加ください</li>
+            <li>夜間のため、部員が校内各所で安全誘導を行います</li>
+            <li>緊急時の連絡体制を整備しています</li>
+          </ul>
+
+          <h3 style="margin-top: 1rem">持ち物・服装</h3>
+          <ul style="margin-left: 1rem">
+            <li>動きやすい服装（夜間のため防寒対策をお願いします）</li>
+            <li>懐中電灯（赤いセロファンを貼ったもの推奨）</li>
+            <li>筆記用具（メモ用）</li>
+            <li>虫除けスプレー</li>
+          </ul>
+
+          <h3 style="margin-top: 1rem">悪天候時の対応</h3>
+          <p>
+            雨天・曇天の場合は予備日（8月11日）に延期します。
+            延期が決定した場合は、開催日前日の17時までにメールでご連絡いたします。
+            予備日も悪天候の場合は、室内でのプラネタリウム上映と天文講座に変更して実施いたします。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer-content">
+        <h3 class="text-accent">屋代高校 天文班</h3>
+        <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
+
+        <!-- SNSアイコン（ダミーリンク） -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
+        </div>
+
+        <p class="mt-2">
+          <small>
+            © 2025 屋代高校 天文班 |
+            <a href="#privacy" style="color: var(--text-muted)"
+              >プライバシーポリシー</a
+            >
+            |
+            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
+          </small>
         </p>
       </div>
-    </section>
-  </main>
-  
-  <!-- フッター -->
-  <footer>
-    <div class="footer-content">
-      <h3 class="text-accent">屋代高校 天文班</h3>
-      <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
-      
-      <!-- SNSアイコン（ダミーリンク） -->
-      <div class="social-links">
-        <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-        <a href="#" aria-label="YouTube" title="YouTube">📹</a>
-      </div>
-      
-      <p class="mt-2">
-        <small>
-          © 2025 屋代高校 天文班 |
-          <a href="#privacy" style="color: var(--text-muted);">プライバシーポリシー</a> |
-          <a href="#terms" style="color: var(--text-muted);">利用規約</a>
-        </small>
-      </p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript -->
-  <script src="js/stars.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/stars.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>

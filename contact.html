@@ -1,210 +1,352 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>お問い合わせ - 屋代高校 天文班</title>
-  <meta name="description" content="屋代高校天文班へのお問い合わせページ。入部希望や観測会参加についてお気軽にご相談ください。">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- 星空キャンバス -->
-  <canvas id="starfield"></canvas>
-  
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">屋代高校 天文班</a>
-      
-      <!-- ハンバーガーメニューボタン -->
-      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
-        ☰
-      </button>
-      
-      <!-- ナビゲーションメニュー -->
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">天文班紹介</a></li>
-          <li><a href="event.html">星空観測会</a></li>
-          <li><a href="archive.html">過去の記録</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <!-- メインコンテンツ -->
-  <main>
-    <section>
-      <h1 class="text-center text-accent mb-2">お問い合わせ</h1>
-      
-      <!-- 概要 -->
-      <div class="card mb-2 text-center">
-        <h2 class="text-accent">お気軽にご相談ください</h2>
-        <p style="font-size: 1.1rem; margin: 1rem 0;">
-          入部や見学、観測会への参加など、天文班に関するご質問・ご相談を承ります。<br>
-          お問い合わせフォームまたはメールにてお気軽にお声かけください。
-        </p>
-      </div>
-      
-      <!-- お問い合わせフォーム -->
-      <div class="card mb-2">
-        <h2 class="text-accent">📝 お問い合わせフォーム</h2>
-        <p>下記のGoogleフォームからお問い合わせいただけます。内容を確認後、2〜3日以内にご返信いたします。</p>
-        
-        <div class="text-center" style="margin: 2rem 0;">
-          <a href="https://docs.google.com/forms/xxxxxxxx" target="_blank" class="btn primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
-            ✉️ お問い合わせフォーム
-          </a>
-        </div>
-        
-        <div style="background: var(--card-alt); padding: 1rem; border-radius: 4px; margin-top: 1rem;">
-          <h3 style="color: var(--accent); margin-bottom: 0.5rem;">フォームで送信できる内容</h3>
-          <ul style="margin-left: 1rem;">
-            <li>天文班への入部に関するご質問</li>
-            <li>部活動見学のお申し込み</li>
-            <li>観測会への参加に関するお問い合わせ</li>
-            <li>天文ドームや設備に関するご質問</li>
-            <li>地域連携・出張教室のご依頼</li>
-            <li>その他、天文班に関するご相談</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ - 屋代高校 天文班</title>
+    <meta
+      name="description"
+      content="屋代高校天文班へのお問い合わせページ。入部希望や観測会参加についてお気軽にご相談ください。"
+    />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "wrj8jhe",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 星空キャンバス -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">屋代高校 天文班</a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button
+          class="menu-toggle"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <!-- ナビゲーションメニュー -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">天文班紹介</a></li>
+            <li><a href="event.html">星空観測会</a></li>
+            <li><a href="archive.html">過去の記録</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
           </ul>
-        </div>
+        </nav>
       </div>
-      
-      <!-- メールでのお問い合わせ -->
-      <div class="card mb-2">
-        <h2 class="text-accent">📧 メールでのお問い合わせ</h2>
-        <p>直接メールでお問い合わせいただくことも可能です。</p>
-        
-        <div style="background: var(--card-alt); padding: 1.5rem; border-radius: 8px; margin: 1rem 0; text-align: center;">
-          <h3 style="color: var(--accent); margin-bottom: 1rem;">メールアドレス</h3>
-          <div style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem;">
-            <a href="mailto:astronomy@yashiro-school.jp" style="color: var(--accent); text-decoration: none;">
-              astronomy@yashiro-school.jp
-            </a>
-          </div>
-          <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
-            ※仮のメールアドレスです。実際の連絡先は後日設定してください。
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section>
+        <h1 class="text-center text-accent mb-2">お問い合わせ</h1>
+
+        <!-- 概要 -->
+        <div class="card mb-2 text-center">
+          <h2 class="text-accent">お気軽にご相談ください</h2>
+          <p style="font-size: 1.1rem; margin: 1rem 0">
+            入部や見学、観測会への参加など、天文班に関するご質問・ご相談を承ります。<br />
+            お問い合わせフォームまたはメールにてお気軽にお声かけください。
           </p>
         </div>
-        
-        <div style="background: var(--bg); padding: 1rem; border-radius: 4px; border: 1px solid var(--card-alt);">
-          <h3 style="color: var(--accent); margin-bottom: 0.5rem;">メール送信時のお願い</h3>
-          <ul style="margin-left: 1rem; font-size: 0.9rem;">
-            <li>件名に「天文班への問い合わせ」とご記入ください</li>
-            <li>お名前・学年（または年齢）・連絡先をご記入ください</li>
-            <li>具体的なご質問内容をお書きください</li>
-            <li>返信には2〜3日お時間をいただく場合があります</li>
-          </ul>
+
+        <!-- お問い合わせフォーム -->
+        <div class="card mb-2">
+          <h2 class="text-accent">📝 お問い合わせフォーム</h2>
+          <p>
+            下記のGoogleフォームからお問い合わせいただけます。内容を確認後、2〜3日以内にご返信いたします。
+          </p>
+
+          <div class="text-center" style="margin: 2rem 0">
+            <a
+              href="https://docs.google.com/forms/xxxxxxxx"
+              target="_blank"
+              class="btn primary"
+              style="font-size: 1.1rem; padding: 1rem 2rem"
+            >
+              ✉️ お問い合わせフォーム
+            </a>
+          </div>
+
+          <div
+            style="
+              background: var(--card-alt);
+              padding: 1rem;
+              border-radius: 4px;
+              margin-top: 1rem;
+            "
+          >
+            <h3 style="color: var(--accent); margin-bottom: 0.5rem">
+              フォームで送信できる内容
+            </h3>
+            <ul style="margin-left: 1rem">
+              <li>天文班への入部に関するご質問</li>
+              <li>部活動見学のお申し込み</li>
+              <li>観測会への参加に関するお問い合わせ</li>
+              <li>天文ドームや設備に関するご質問</li>
+              <li>地域連携・出張教室のご依頼</li>
+              <li>その他、天文班に関するご相談</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      
-      <!-- よくあるご質問 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">❓ よくあるご質問</h2>
-        
-        <div style="margin-top: 1rem;">
-          <details style="margin-bottom: 1rem; background: var(--card-alt); padding: 1rem; border-radius: 4px;">
-            <summary style="cursor: pointer; font-weight: bold; color: var(--accent);">
-              天文の知識がなくても入部できますか？
-            </summary>
-            <div style="margin-top: 0.5rem; padding-left: 1rem;">
-              はい、もちろんです。現在の部員の多くも初心者として入部しました。
-              基礎から丁寧に指導しますので、「星が好き」という気持ちがあれば十分です。
+
+        <!-- メールでのお問い合わせ -->
+        <div class="card mb-2">
+          <h2 class="text-accent">📧 メールでのお問い合わせ</h2>
+          <p>直接メールでお問い合わせいただくことも可能です。</p>
+
+          <div
+            style="
+              background: var(--card-alt);
+              padding: 1.5rem;
+              border-radius: 8px;
+              margin: 1rem 0;
+              text-align: center;
+            "
+          >
+            <h3 style="color: var(--accent); margin-bottom: 1rem">
+              メールアドレス
+            </h3>
+            <div
+              style="
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+              "
+            >
+              <a
+                href="mailto:astronomy@yashiro-school.jp"
+                style="color: var(--accent); text-decoration: none"
+              >
+                astronomy@yashiro-school.jp
+              </a>
             </div>
-          </details>
-          
-          <details style="margin-bottom: 1rem; background: var(--card-alt); padding: 1rem; border-radius: 4px;">
-            <summary style="cursor: pointer; font-weight: bold; color: var(--accent);">
-              部活動の頻度はどれくらいですか？
-            </summary>
-            <div style="margin-top: 0.5rem; padding-left: 1rem;">
-              平日は火曜日と金曜日の放課後、土曜日は月1回の合宿があります。
-              観測会は月1〜2回開催していますが、参加は自由です。
-            </div>
-          </details>
-          
-          <details style="margin-bottom: 1rem; background: var(--card-alt); padding: 1rem; border-radius: 4px;">
-            <summary style="cursor: pointer; font-weight: bold; color: var(--accent);">
-              必要な費用はありますか？
-            </summary>
-            <div style="margin-top: 0.5rem; padding-left: 1rem;">
-              部費は月500円です。合宿費（年2〜3回、1回3,000円程度）と
-              個人で使用する星座早見盤等の購入費（年間2,000円程度）が別途必要です。
-            </div>
-          </details>
-          
-          <details style="margin-bottom: 1rem; background: var(--card-alt); padding: 1rem; border-radius: 4px;">
-            <summary style="cursor: pointer; font-weight: bold; color: var(--accent);">
-              一般の方も観測会に参加できますか？
-            </summary>
-            <div style="margin-top: 0.5rem; padding-left: 1rem;">
-              はい、月1回開催の市民観測会にご参加いただけます。
-              事前申し込みが必要で、参加費は1家族800円です。
-            </div>
-          </details>
-          
-          <details style="margin-bottom: 1rem; background: var(--card-alt); padding: 1rem; border-radius: 4px;">
-            <summary style="cursor: pointer; font-weight: bold; color: var(--accent);">
-              見学はできますか？
-            </summary>
-            <div style="margin-top: 0.5rem; padding-left: 1rem;">
-              もちろんです。火曜日・金曜日の放課後にお越しください。
-              事前にご連絡いただければ、より詳しくご案内できます。
-            </div>
-          </details>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0">
+              ※仮のメールアドレスです。実際の連絡先は後日設定してください。
+            </p>
+          </div>
+
+          <div
+            style="
+              background: var(--bg);
+              padding: 1rem;
+              border-radius: 4px;
+              border: 1px solid var(--card-alt);
+            "
+          >
+            <h3 style="color: var(--accent); margin-bottom: 0.5rem">
+              メール送信時のお願い
+            </h3>
+            <ul style="margin-left: 1rem; font-size: 0.9rem">
+              <li>件名に「天文班への問い合わせ」とご記入ください</li>
+              <li>お名前・学年（または年齢）・連絡先をご記入ください</li>
+              <li>具体的なご質問内容をお書きください</li>
+              <li>返信には2〜3日お時間をいただく場合があります</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      
-      <!-- 個人情報の取り扱い -->
-      <div class="card">
-        <h2 class="text-accent">🔒 個人情報の取り扱いについて</h2>
-        <div style="background: var(--bg); padding: 1rem; border-radius: 4px; border: 1px solid var(--card-alt);">
-          <ul style="margin-left: 1rem; font-size: 0.9rem;">
-            <li>お預かりした個人情報は、お問い合わせへの回答および連絡のためのみに使用いたします</li>
-            <li>第三者への提供や目的外利用は一切行いません</li>
-            <li>適切な安全管理措置を講じて個人情報を保護いたします</li>
-            <li>個人情報の取り扱いに関するご質問がございましたら、お気軽にお問い合わせください</li>
-          </ul>
+
+        <!-- よくあるご質問 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">❓ よくあるご質問</h2>
+
+          <div style="margin-top: 1rem">
+            <details
+              style="
+                margin-bottom: 1rem;
+                background: var(--card-alt);
+                padding: 1rem;
+                border-radius: 4px;
+              "
+            >
+              <summary
+                style="cursor: pointer; font-weight: bold; color: var(--accent)"
+              >
+                天文の知識がなくても入部できますか？
+              </summary>
+              <div style="margin-top: 0.5rem; padding-left: 1rem">
+                はい、もちろんです。現在の部員の多くも初心者として入部しました。
+                基礎から丁寧に指導しますので、「星が好き」という気持ちがあれば十分です。
+              </div>
+            </details>
+
+            <details
+              style="
+                margin-bottom: 1rem;
+                background: var(--card-alt);
+                padding: 1rem;
+                border-radius: 4px;
+              "
+            >
+              <summary
+                style="cursor: pointer; font-weight: bold; color: var(--accent)"
+              >
+                部活動の頻度はどれくらいですか？
+              </summary>
+              <div style="margin-top: 0.5rem; padding-left: 1rem">
+                平日は火曜日と金曜日の放課後、土曜日は月1回の合宿があります。
+                観測会は月1〜2回開催していますが、参加は自由です。
+              </div>
+            </details>
+
+            <details
+              style="
+                margin-bottom: 1rem;
+                background: var(--card-alt);
+                padding: 1rem;
+                border-radius: 4px;
+              "
+            >
+              <summary
+                style="cursor: pointer; font-weight: bold; color: var(--accent)"
+              >
+                必要な費用はありますか？
+              </summary>
+              <div style="margin-top: 0.5rem; padding-left: 1rem">
+                部費は月500円です。合宿費（年2〜3回、1回3,000円程度）と
+                個人で使用する星座早見盤等の購入費（年間2,000円程度）が別途必要です。
+              </div>
+            </details>
+
+            <details
+              style="
+                margin-bottom: 1rem;
+                background: var(--card-alt);
+                padding: 1rem;
+                border-radius: 4px;
+              "
+            >
+              <summary
+                style="cursor: pointer; font-weight: bold; color: var(--accent)"
+              >
+                一般の方も観測会に参加できますか？
+              </summary>
+              <div style="margin-top: 0.5rem; padding-left: 1rem">
+                はい、月1回開催の市民観測会にご参加いただけます。
+                事前申し込みが必要で、参加費は1家族800円です。
+              </div>
+            </details>
+
+            <details
+              style="
+                margin-bottom: 1rem;
+                background: var(--card-alt);
+                padding: 1rem;
+                border-radius: 4px;
+              "
+            >
+              <summary
+                style="cursor: pointer; font-weight: bold; color: var(--accent)"
+              >
+                見学はできますか？
+              </summary>
+              <div style="margin-top: 0.5rem; padding-left: 1rem">
+                もちろんです。火曜日・金曜日の放課後にお越しください。
+                事前にご連絡いただければ、より詳しくご案内できます。
+              </div>
+            </details>
+          </div>
         </div>
-        
-        <div class="text-center" style="margin-top: 2rem;">
-          <p style="margin-bottom: 1rem;">その他のご質問やご不明な点がございましたら、お気軽にお問い合わせください。</p>
-          <a href="index.html" class="btn secondary">トップページに戻る</a>
-          <a href="about.html" class="btn secondary">天文班について</a>
+
+        <!-- 個人情報の取り扱い -->
+        <div class="card">
+          <h2 class="text-accent">🔒 個人情報の取り扱いについて</h2>
+          <div
+            style="
+              background: var(--bg);
+              padding: 1rem;
+              border-radius: 4px;
+              border: 1px solid var(--card-alt);
+            "
+          >
+            <ul style="margin-left: 1rem; font-size: 0.9rem">
+              <li>
+                お預かりした個人情報は、お問い合わせへの回答および連絡のためのみに使用いたします
+              </li>
+              <li>第三者への提供や目的外利用は一切行いません</li>
+              <li>適切な安全管理措置を講じて個人情報を保護いたします</li>
+              <li>
+                個人情報の取り扱いに関するご質問がございましたら、お気軽にお問い合わせください
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-center" style="margin-top: 2rem">
+            <p style="margin-bottom: 1rem">
+              その他のご質問やご不明な点がございましたら、お気軽にお問い合わせください。
+            </p>
+            <a href="index.html" class="btn secondary">トップページに戻る</a>
+            <a href="about.html" class="btn secondary">天文班について</a>
+          </div>
         </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer-content">
+        <h3 class="text-accent">屋代高校 天文班</h3>
+        <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
+
+        <!-- SNSアイコン（ダミーリンク） -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
+        </div>
+
+        <p class="mt-2">
+          <small>
+            © 2025 屋代高校 天文班 |
+            <a href="#privacy" style="color: var(--text-muted)"
+              >プライバシーポリシー</a
+            >
+            |
+            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
+          </small>
+        </p>
       </div>
-    </section>
-  </main>
-  
-  <!-- フッター -->
-  <footer>
-    <div class="footer-content">
-      <h3 class="text-accent">屋代高校 天文班</h3>
-      <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
-      
-      <!-- SNSアイコン（ダミーリンク） -->
-      <div class="social-links">
-        <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-        <a href="#" aria-label="YouTube" title="YouTube">📹</a>
-      </div>
-      
-      <p class="mt-2">
-        <small>
-          © 2025 屋代高校 天文班 |
-          <a href="#privacy" style="color: var(--text-muted);">プライバシーポリシー</a> |
-          <a href="#terms" style="color: var(--text-muted);">利用規約</a>
-        </small>
-      </p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript -->
-  <script src="js/stars.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/stars.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>

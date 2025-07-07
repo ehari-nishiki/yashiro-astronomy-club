@@ -1,239 +1,373 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>過去の記録 - 屋代高校 天文班</title>
-  <meta name="description" content="屋代高校天文班の過去の活動記録をギャラリー形式でご紹介。観測会や合宿の様子をご覧ください。">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- 星空キャンバス -->
-  <canvas id="starfield"></canvas>
-  
-  <!-- ヘッダー -->
-  <header>
-    <div class="header-content">
-      <a href="index.html" class="logo">屋代高校 天文班</a>
-      
-      <!-- ハンバーガーメニューボタン -->
-      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
-        ☰
-      </button>
-      
-      <!-- ナビゲーションメニュー -->
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">天文班紹介</a></li>
-          <li><a href="event.html">星空観測会</a></li>
-          <li><a href="archive.html">過去の記録</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  
-  <!-- メインコンテンツ -->
-  <main>
-    <section>
-      <h1 class="text-center text-accent mb-2">過去の活動記録</h1>
-      
-      <!-- 2024年度活動 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">2024年度の活動</h2>
-        <div class="gallery">
-          <figure>
-            <img src="images/archive/sample1.jpg" alt="2024年戸隠夏合宿" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>📸 戸隠夏合宿</div>';">
-            <figcaption>
-              <strong>戸隠夏合宿 2024</strong><br>
-              3泊4日の本格的な天体観測合宿
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="2024年ペルセウス座流星群観測" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🌟 流星群観測</div>';">
-            <figcaption>
-              <strong>ペルセウス座流星群観測</strong><br>
-              一晩で100個以上の流星を観測
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample3.jpg" alt="2024年鳩祭展示" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🎪 鳩祭展示</div>';">
-            <figcaption>
-              <strong>鳩祭天文展示</strong><br>
-              プラネタリウム上映と天体写真展
-            </figcaption>
-          </figure>
-          
-          <figure style="grid-row: span 2;">
-            <img src="images/archive/sample1.jpg" alt="2024年市民観測会" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>👥 市民観測会</div>';">
-            <figcaption>
-              <strong>市民観測会</strong><br>
-              月に一度の定期観測会、多くの市民の方が参加
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="2024年天体写真撮影" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>📷 天体写真</div>';">
-            <figcaption>
-              <strong>天体写真撮影</strong><br>
-              部員による星雲・星団の撮影成果
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample3.jpg" alt="2024年新入部員歓迎会" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🎉 歓迎会</div>';">
-            <figcaption>
-              <strong>新入部員歓迎会</strong><br>
-              15名の新入部員を迎えて
-            </figcaption>
-          </figure>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>過去の記録 - 屋代高校 天文班</title>
+    <meta
+      name="description"
+      content="屋代高校天文班の過去の活動記録をギャラリー形式でご紹介。観測会や合宿の様子をご覧ください。"
+    />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "wrj8jhe",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 星空キャンバス -->
+    <canvas id="starfield"></canvas>
+
+    <!-- ヘッダー -->
+    <header>
+      <div class="header-content">
+        <a href="index.html" class="logo">屋代高校 天文班</a>
+
+        <!-- ハンバーガーメニューボタン -->
+        <button
+          class="menu-toggle"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <!-- ナビゲーションメニュー -->
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="about.html">天文班紹介</a></li>
+            <li><a href="event.html">星空観測会</a></li>
+            <li><a href="archive.html">過去の記録</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
       </div>
-      
-      <!-- 2023年度活動 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">2023年度の活動</h2>
-        <div class="gallery">
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="2023年戸隠合宿" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🏔️ 戸隠合宿</div>';">
-            <figcaption>
-              <strong>戸隠合宿 2023</strong><br>
-              澄んだ星空の下での観測活動
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample1.jpg" alt="2023年部分日食観測" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>☀️ 日食観測</div>';">
-            <figcaption>
-              <strong>部分日食観測</strong><br>
-              特別な観測機材を使用した安全な観測
-            </figcaption>
-          </figure>
-          
-          <figure style="grid-row: span 2;">
-            <img src="images/archive/sample3.jpg" alt="2023年県大会発表" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🏆 県大会発表</div>';">
-            <figcaption>
-              <strong>県高校文化祭 研究発表</strong><br>
-              「変光星の長期観測」で優秀賞を受賞
-            </figcaption>
-          </figure>
-          
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="2023年地域交流" onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>👨‍👩‍👧‍👦 地域交流</div>';">
-            <figcaption>
-              <strong>小学校出張教室</strong><br>
-              地域の小学校での天文教室開催
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      
-      <!-- 活動統計 -->
-      <div class="card mb-2">
-        <h2 class="text-accent">📊 活動実績</h2>
-        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-          <div style="text-align: center; padding: 1.5rem; background: var(--card-alt); border-radius: 8px;">
-            <div style="font-size: 2rem; color: var(--accent); font-weight: bold;">50+</div>
-            <div>年間観測会開催数</div>
-          </div>
-          <div style="text-align: center; padding: 1.5rem; background: var(--card-alt); border-radius: 8px;">
-            <div style="font-size: 2rem; color: var(--accent); font-weight: bold;">1,200+</div>
-            <div>年間参加者数</div>
-          </div>
-          <div style="text-align: center; padding: 1.5rem; background: var(--card-alt); border-radius: 8px;">
-            <div style="font-size: 2rem; color: var(--accent); font-weight: bold;">15</div>
-            <div>合宿実施回数</div>
-          </div>
-          <div style="text-align: center; padding: 1.5rem; background: var(--card-alt); border-radius: 8px;">
-            <div style="font-size: 2rem; color: var(--accent); font-weight: bold;">300+</div>
-            <div>撮影天体写真数</div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- 主な受賞歴 -->
-      <div class="card">
-        <h2 class="text-accent">🏆 主な受賞歴・実績</h2>
-        <div style="overflow-x: auto;">
-          <table>
-            <thead>
-              <tr>
-                <th>年度</th>
-                <th>大会・コンテスト名</th>
-                <th>成果</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2023</td>
-                <td>長野県高等学校文化祭 自然科学部門</td>
-                <td>研究発表「変光星の長期観測」優秀賞</td>
-              </tr>
-              <tr>
-                <td>2023</td>
-                <td>全国高等学校総合文化祭</td>
-                <td>天体写真部門 入選</td>
-              </tr>
-              <tr>
-                <td>2022</td>
-                <td>日本天文学会ジュニアセッション</td>
-                <td>ポスター発表「月面クレーターの形成過程」</td>
-              </tr>
-              <tr>
-                <td>2022</td>
-                <td>長野県青少年科学の祭典</td>
-                <td>ブース出展「手作りプラネタリウム」</td>
-              </tr>
-              <tr>
-                <td>2021</td>
-                <td>天文ガイド フォトコンテスト</td>
-                <td>部員作品「アンドロメダ銀河」入選</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        
-        <div style="margin-top: 2rem; text-align: center;">
-          <p>これらの活動を通じて、部員たちは天文学への理解を深め、<br>地域の皆様とともに宇宙の素晴らしさを共有しています。</p>
-          <div style="margin-top: 1rem;">
-            <a href="about.html" class="btn secondary">天文班について詳しく見る</a>
-            <a href="event.html" class="btn primary">次回観測会に参加する</a>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+      <section>
+        <h1 class="text-center text-accent mb-2">過去の活動記録</h1>
+
+        <!-- 2024年度活動 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">2024年度の活動</h2>
+          <div class="gallery">
+            <figure>
+              <img
+                src="images/archive/sample1.jpg"
+                alt="2024年戸隠夏合宿"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>📸 戸隠夏合宿</div>';"
+              />
+              <figcaption>
+                <strong>戸隠夏合宿 2024</strong><br />
+                3泊4日の本格的な天体観測合宿
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample2.jpg"
+                alt="2024年ペルセウス座流星群観測"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🌟 流星群観測</div>';"
+              />
+              <figcaption>
+                <strong>ペルセウス座流星群観測</strong><br />
+                一晩で100個以上の流星を観測
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample3.jpg"
+                alt="2024年鳩祭展示"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🎪 鳩祭展示</div>';"
+              />
+              <figcaption>
+                <strong>鳩祭天文展示</strong><br />
+                プラネタリウム上映と天体写真展
+              </figcaption>
+            </figure>
+
+            <figure style="grid-row: span 2">
+              <img
+                src="images/archive/sample1.jpg"
+                alt="2024年市民観測会"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>👥 市民観測会</div>';"
+              />
+              <figcaption>
+                <strong>市民観測会</strong><br />
+                月に一度の定期観測会、多くの市民の方が参加
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample2.jpg"
+                alt="2024年天体写真撮影"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>📷 天体写真</div>';"
+              />
+              <figcaption>
+                <strong>天体写真撮影</strong><br />
+                部員による星雲・星団の撮影成果
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample3.jpg"
+                alt="2024年新入部員歓迎会"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🎉 歓迎会</div>';"
+              />
+              <figcaption>
+                <strong>新入部員歓迎会</strong><br />
+                15名の新入部員を迎えて
+              </figcaption>
+            </figure>
           </div>
         </div>
+
+        <!-- 2023年度活動 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">2023年度の活動</h2>
+          <div class="gallery">
+            <figure>
+              <img
+                src="images/archive/sample2.jpg"
+                alt="2023年戸隠合宿"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🏔️ 戸隠合宿</div>';"
+              />
+              <figcaption>
+                <strong>戸隠合宿 2023</strong><br />
+                澄んだ星空の下での観測活動
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample1.jpg"
+                alt="2023年部分日食観測"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>☀️ 日食観測</div>';"
+              />
+              <figcaption>
+                <strong>部分日食観測</strong><br />
+                特別な観測機材を使用した安全な観測
+              </figcaption>
+            </figure>
+
+            <figure style="grid-row: span 2">
+              <img
+                src="images/archive/sample3.jpg"
+                alt="2023年県大会発表"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>🏆 県大会発表</div>';"
+              />
+              <figcaption>
+                <strong>県高校文化祭 研究発表</strong><br />
+                「変光星の長期観測」で優秀賞を受賞
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/archive/sample2.jpg"
+                alt="2023年地域交流"
+                onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>👨‍👩‍👧‍👦 地域交流</div>';"
+              />
+              <figcaption>
+                <strong>小学校出張教室</strong><br />
+                地域の小学校での天文教室開催
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- 活動統計 -->
+        <div class="card mb-2">
+          <h2 class="text-accent">📊 活動実績</h2>
+          <div
+            class="grid"
+            style="
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 1rem;
+            "
+          >
+            <div
+              style="
+                text-align: center;
+                padding: 1.5rem;
+                background: var(--card-alt);
+                border-radius: 8px;
+              "
+            >
+              <div
+                style="font-size: 2rem; color: var(--accent); font-weight: bold"
+              >
+                50+
+              </div>
+              <div>年間観測会開催数</div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1.5rem;
+                background: var(--card-alt);
+                border-radius: 8px;
+              "
+            >
+              <div
+                style="font-size: 2rem; color: var(--accent); font-weight: bold"
+              >
+                1,200+
+              </div>
+              <div>年間参加者数</div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1.5rem;
+                background: var(--card-alt);
+                border-radius: 8px;
+              "
+            >
+              <div
+                style="font-size: 2rem; color: var(--accent); font-weight: bold"
+              >
+                15
+              </div>
+              <div>合宿実施回数</div>
+            </div>
+            <div
+              style="
+                text-align: center;
+                padding: 1.5rem;
+                background: var(--card-alt);
+                border-radius: 8px;
+              "
+            >
+              <div
+                style="font-size: 2rem; color: var(--accent); font-weight: bold"
+              >
+                300+
+              </div>
+              <div>撮影天体写真数</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 主な受賞歴 -->
+        <div class="card">
+          <h2 class="text-accent">🏆 主な受賞歴・実績</h2>
+          <div style="overflow-x: auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>年度</th>
+                  <th>大会・コンテスト名</th>
+                  <th>成果</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2023</td>
+                  <td>長野県高等学校文化祭 自然科学部門</td>
+                  <td>研究発表「変光星の長期観測」優秀賞</td>
+                </tr>
+                <tr>
+                  <td>2023</td>
+                  <td>全国高等学校総合文化祭</td>
+                  <td>天体写真部門 入選</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>日本天文学会ジュニアセッション</td>
+                  <td>ポスター発表「月面クレーターの形成過程」</td>
+                </tr>
+                <tr>
+                  <td>2022</td>
+                  <td>長野県青少年科学の祭典</td>
+                  <td>ブース出展「手作りプラネタリウム」</td>
+                </tr>
+                <tr>
+                  <td>2021</td>
+                  <td>天文ガイド フォトコンテスト</td>
+                  <td>部員作品「アンドロメダ銀河」入選</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 2rem; text-align: center">
+            <p>
+              これらの活動を通じて、部員たちは天文学への理解を深め、<br />地域の皆様とともに宇宙の素晴らしさを共有しています。
+            </p>
+            <div style="margin-top: 1rem">
+              <a href="about.html" class="btn secondary"
+                >天文班について詳しく見る</a
+              >
+              <a href="event.html" class="btn primary">次回観測会に参加する</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer>
+      <div class="footer-content">
+        <h3 class="text-accent">屋代高校 天文班</h3>
+        <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
+
+        <!-- SNSアイコン（ダミーリンク） -->
+        <div class="social-links">
+          <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
+          <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
+        </div>
+
+        <p class="mt-2">
+          <small>
+            © 2025 屋代高校 天文班 |
+            <a href="#privacy" style="color: var(--text-muted)"
+              >プライバシーポリシー</a
+            >
+            |
+            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
+          </small>
+        </p>
       </div>
-    </section>
-  </main>
-  
-  <!-- フッター -->
-  <footer>
-    <div class="footer-content">
-      <h3 class="text-accent">屋代高校 天文班</h3>
-      <p>〒387-8501 長野県千曲市屋代1000（仮住所）</p>
-      
-      <!-- SNSアイコン（ダミーリンク） -->
-      <div class="social-links">
-        <a href="#" aria-label="Twitter" title="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
-        <a href="#" aria-label="YouTube" title="YouTube">📹</a>
-      </div>
-      
-      <p class="mt-2">
-        <small>
-          © 2025 屋代高校 天文班 |
-          <a href="#privacy" style="color: var(--text-muted);">プライバシーポリシー</a> |
-          <a href="#terms" style="color: var(--text-muted);">利用規約</a>
-        </small>
-      </p>
-    </div>
-  </footer>
-  
-  <!-- JavaScript -->
-  <script src="js/stars.js"></script>
-  <script src="js/menu.js"></script>
-</body>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/stars.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
 </html>

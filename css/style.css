@@ -20,7 +20,9 @@
 
 /* 基本スタイル */
 body {
-  font-family: "Yu Gothic", "游ゴシック", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "游明朝", "YuMincho", sans-serif;
+  font-family: hiragino-kaku-gothic-pron, sans-serif;
+  font-weight: 300;
+  font-style: normal;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -135,7 +137,8 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(rgba(1, 13, 26, 0.7), rgba(1, 13, 26, 0.7)), url('../images/hero-bg.jpg');
+  background: linear-gradient(rgba(1, 13, 26, 0.7), rgba(1, 13, 26, 0.7)),
+    url("../images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -175,7 +178,7 @@ section {
   box-shadow: 0 4px 16px var(--shadow);
 }
 
-.card h3 {
+.card h2 {
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
@@ -393,12 +396,24 @@ footer {
 }
 
 /* ユーティリティ */
-.text-center { text-align: center; }
-.text-accent { color: var(--accent); }
-.mb-1 { margin-bottom: 1rem; }
-.mb-2 { margin-bottom: 2rem; }
-.mt-1 { margin-top: 1rem; }
-.mt-2 { margin-top: 2rem; }
+.text-center {
+  text-align: center;
+}
+.text-accent {
+  color: var(--accent);
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
 
 /* レスポンシブ（PC） */
 @media (min-width: 768px) {
@@ -406,7 +421,7 @@ footer {
   .menu-toggle {
     display: none;
   }
-  
+
   .nav-menu {
     position: static;
     width: auto;
@@ -415,35 +430,35 @@ footer {
     padding: 0;
     right: 0;
   }
-  
+
   .nav-menu ul {
     display: flex;
   }
-  
+
   .nav-menu li {
     margin: 0 0 0 1rem;
   }
-  
+
   /* グリッド（2×2） */
   .grid-2x2 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   /* ギャラリー */
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-  
+
   /* セクション */
   section {
     padding: 3rem 2rem;
   }
-  
+
   /* ヒーロー */
   .hero h1 {
     font-size: 3.5rem;
   }
-  
+
   .hero-logo {
     max-width: 400px;
   }
@@ -454,7 +469,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  
+
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
