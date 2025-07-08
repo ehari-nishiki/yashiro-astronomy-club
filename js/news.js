@@ -9,7 +9,7 @@ const SHEET_CONFIG = {
 class NewsManager {
   constructor() {
     this.newsContainer = null;
-    this.maxItems = 3; // 最新3件を表示
+    this.maxItems = 5; // 最新5件を表示
   }
 
   async loadNews() {
