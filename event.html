@@ -77,12 +77,14 @@
     <!-- メインコンテンツ -->
     <main>
       <section>
-        <h1 class="text-center text-accent mb-2">
-          星空観測会 in 屋代高校 天文ドーム
-        </h1>
-
+        <h1 class="text-center text-accent mb-2">屋代高校天文班 星空観測会</h1>
         <!-- リード文 -->
         <div class="card mb-2 text-center">
+          <img
+            src="images/event_main_visual.png"
+            class="event_main_visual"
+            onerror="this.style.background='var(--card-alt)'; this.innerHTML='<div style=&quot;display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-muted);&quot;>メイン</div>';"
+          />
           <h2 class="text-accent">宇宙への扉を開こう！</h2>
           <p style="font-size: 1.1rem; margin: 1rem 0">
             屋代高校の本格的な天文ドームで、星空の美しさと宇宙の神秘を体験してみませんか？<br />
@@ -201,6 +203,45 @@
           </dl>
         </div>
 
+        <div class="card mb-2">
+          <h2 class="text-accent">❓ よくあるご質問</h2>
+
+          <details
+            style="
+              margin-bottom: 1rem;
+              background: var(--card-alt);
+              padding: 1rem;
+              border-radius: 4px;
+            "
+          >
+            <summary
+              style="cursor: pointer; font-weight: bold; color: var(--accent)"
+            >
+              兄弟で参加してもいいですか？
+            </summary>
+            <div style="margin-top: 0.5rem; padding-left: 1rem">
+              いいえ。保護者1名＋子供1名でのお申し込みをお願いします。
+            </div>
+          </details>
+
+          <details
+            style="
+              margin-bottom: 1rem;
+              background: var(--card-alt);
+              padding: 1rem;
+              border-radius: 4px;
+            "
+          >
+            <summary
+              style="cursor: pointer; font-weight: bold; color: var(--accent)"
+            >
+              延期の場合はどうやってわかるの？
+            </summary>
+            <div style="margin-top: 0.5rem; padding-left: 1rem">
+              開催3日前に天候を判断し、実施・不実施を決定します。
+            </div>
+          </details>
+        </div>
         <!-- 申し込み -->
         <div class="card mb-2 text-center">
           <h2 class="text-accent">📝 参加申し込み</h2>
@@ -219,7 +260,7 @@
           </div>
           <p style="color: var(--text-muted); font-size: 0.9rem">
             ※申し込み締切：開催日の3日前まで<br />
-            ※参加確定のご連絡は申し込み後2日以内にメールにてお送りします
+            ※参加確定のご連絡は申し込み後3日以内にメールにてお送りします
           </p>
         </div>
 
@@ -244,7 +285,7 @@
 
             <h3 style="margin-top: 1rem">🚗 お車でお越しの場合</h3>
             <ul style="margin-left: 1rem">
-              <li>上信越自動車道「坂城IC」より約15分</li>
+              <li>上信越自動車道「更埴IC」より約5分</li>
               <li>
                 <strong>駐車場：</strong>校内駐車場をご利用いただけます（無料）
               </li>

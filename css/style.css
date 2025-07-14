@@ -395,6 +395,10 @@ footer {
   color: var(--accent);
 }
 
+.event_main_visual {
+  width: 80%;
+}
+
 /* ユーティリティ */
 .text-center {
   text-align: center;
