@@ -122,6 +122,20 @@ main {
   min-height: calc(100vh - 70px);
 }
 
+.astronomyclubcover {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.astronomyclubcover img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
 /* セクション */
 section {
   padding: 2rem 1rem;
