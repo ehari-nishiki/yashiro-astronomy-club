@@ -1,322 +1,291 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>天文班について - 屋代高校 天文班</title>
-    <meta
-      name="description"
-      content="屋代高校天文班の活動内容、設備、年間スケジュールをご紹介。60名の部員が活動する充実した天文部です。"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>天文班について - 屋代高校 天文班</title>
+  <meta name="description" content="屋代高校天文班の歴史、活動内容、設備、年間スケジュールをご紹介。創部1933年、60名以上の部員が活動する充実した天文班です。" />
+  <script>
+    (function (d) {
+      var config = { kitId: "wrj8jhe", scriptTimeout: 3000, async: true },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"), f = false,
+        s = d.getElementsByTagName("script")[0], a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true; clearTimeout(t);
+        try { Typekit.load(config); } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "wrj8jhe",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- 星空キャンバス -->
-    <canvas id="starfield"></canvas>
+<body>
+  <canvas id="starfield"></canvas>
 
-    <!-- ヘッダー -->
-    <header>
-      <div class="header-content">
-        <a href="index.html" class="logo">屋代高校 天文班</a>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">屋代高校 天文班</a>
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html" class="active">天文班紹介</a></li>
+          <li><a href="event.html">星空観測会</a></li>
+          <li><a href="archive.html">過去の記録</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <!-- ハンバーガーメニューボタン -->
-        <button
-          class="menu-toggle"
-          aria-label="メニューを開く"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
+  <main>
+    <section>
+      <h1 class="text-center text-accent mb-2">屋代高校 天文班について</h1>
 
-        <!-- ナビゲーションメニュー -->
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="about.html">天文班紹介</a></li>
-            <li><a href="event.html">星空観測会</a></li>
-            <li><a href="archive.html">過去の記録</a></li>
-            <li><a href="contact.html">お問い合わせ</a></li>
-          </ul>
-        </nav>
+      <div class="astronomyclubcover">
+        <img src="images/astronomyclubcover.jpg" alt="天文班の活動風景" />
       </div>
-    </header>
 
-    <!-- メインコンテンツ -->
-    <main>
-      <section>
-        <h1 class="text-center text-accent mb-2">屋代高校 天文班について</h1>
-        <div class="astronomyclubcover">
-          <img src="images/astronomyclubcover.jpg" />
-        </div>
-        <!-- 概要 -->
-        <div class="card mb-2">
-          <h2 class="text-accent">概要</h2>
-          <p>
-            1931年、数学の宮下教諭が天体望遠鏡を屋代高校に寄贈したのが、屋代高校での天体観測活動の始まりである。</p>
-          
-            <p>高校所有の運転時計付き赤道儀を装置した五藤式三吋望遠鏡は全国的に見ても珍しく、当時の交友会誌には、「実に吾校の宝とも云はねばならぬ」と記されている。
-            望遠鏡の寄贈を皮切りに、屋代高校天文班は1933年に、「天文同好会」として誕生。</p>
-            <p>また、1951年には、望遠鏡のドームが完成した。冬季の工事であったため、工事に苦心したと記されている。</p>
-            <p>1967年の鳩陵には、「本校の望遠鏡は三十歳近い老齢であるためか、マウンティングはがたがた、木星土星は勿論の事、太陽黒点、月面さえもろくに見ることのできない低倍率である」
-            「予算の関係上器具類は六になく、せめて望遠鏡だけでも、もっといいものがあればと思うことしばしばである」と記されている。</p>
-            <p>このような声もあってか、1992年に県下の高校では最大級の天文ドームが完成。
-            完成したドームはカラーステンレスの平葺で、直径4.5メートル、スリット開口幅1.3メートルという大きなもの。
-            また、口径150mm、焦点距離1.8mの屈折型望遠鏡・赤道儀も設置された。
-            これが現在も残る天文ドームと望遠鏡・赤道儀である。</p>
-            <p>現在約60名の班員が在籍し、初心者から経験者まで幅広いメンバーが天文活動を楽しんでいる。
-            </p>
-        </div>
-
-        <!-- 主な活動 -->
-        <div class="card mb-2">
-          <h2 class="text-accent">主な活動</h2>
-          <ul style="margin-left: 1.5rem; margin-top: 1rem">
-            <li>
-              <strong>月例天文合宿</strong> -
-              毎月金曜日-土曜日に学校天文ドームで実施
-            </li>
-            <li><strong>戸隠合宿</strong> - 年に一度の大型合宿（7月下旬）</li>
-            <li>
-              <strong>星空観測会運営</strong> - 一般市民向けイベントの企画・運営
-            </li>
-            <li>
-              <strong>鳩祭展示</strong> - 学園祭での天文展示・プラネタリウム上映
-            </li>
-            <li><strong>研究発表</strong> - 県高校文化祭での研究成果発表</li>
-            <li><strong>地域交流事業</strong> - 小中学校への出張天文教室</li>
-          </ul>
-        </div>
-
-        <!-- 設備 -->
-        <div class="card mb-2">
-          <h2 class="text-accent">設備・機材</h2>
-          <div style="overflow-x: auto">
-            <table>
-              <thead>
-                <tr>
-                  <th>機材名</th>
-                  <th>仕様</th>
-                  <th>用途</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>天文ドーム</td>
-                  <td>自動回転式</td>
-                  <td>本格的な天体観測が可能</td>
-                </tr>
-                <tr>
-                  <td>主力望遠鏡</td>
-                  <td>口径150mm 焦点距離1.8m 屈折式 / 赤道儀搭載</td>
-                  <td>惑星・月面・星雲観測</td>
-                </tr>
-                <tr>
-                  <td>中型屈折式望遠鏡</td>
-                  <td>最大倍率約150倍/赤道儀付き</td>
-                  <td>合宿・観測会での機動的観測</td>
-                </tr>
-                <tr>
-                  <td>中型反射式望遠鏡</td>
-                  <td>口径30cm</td>
-                  <td>合宿・観測会での観測</td>
-                </tr>
-                <tr>
-                  <td>双眼鏡</td>
-                  <td>-</td>
-                  <td>星座学習・彗星観測</td>
-                </tr>
-                <tr>
-                  <td>デジタル一眼レフ</td>
-                  <td>各種数台</td>
-                  <td>天体写真・タイムラプス撮影</td>
-                </tr>
-                <tr>
-                  <td>プラネタリウム</td>
-                  <td>小型投影機</td>
-                  <td>鳩祭・地域イベント</td>
-                </tr>
-              </tbody>
-            </table>
+      <!-- 沿革 -->
+      <div class="card mb-2">
+        <h2>沿革</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1931</div>
+            <div class="timeline-content">
+              <strong>天体観測活動の始まり</strong><br />
+              数学の宮下教諭が天体望遠鏡を屋代高校に寄贈。運転時計付き赤道儀を装置した五藤式三吋望遠鏡は全国的に見ても珍しく、当時の交友会誌に「実に吾校の宝とも云はねばならぬ」と記されている。
+            </div>
           </div>
-        </div>
-
-        <!-- 年間スケジュール -->
-        <div class="card mb-2">
-          <h2 class="text-accent">年間スケジュール</h2>
-          <div class="schedule-container">
-            <div class="schedule-grid">
-              <div class="schedule-month">
-                <h4>4月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>新入班員歓迎会</li>
-                  <li>天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>5月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>6月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                  <li>鳩祭準備</li>
-                  <li>文化班展示</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>7月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                  <li>戸隠夏合宿</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>8月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>公開星空観測会</li>
-                  <li>天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>9月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>10月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>11月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>12月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>クリスマス合宿</li>
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>1月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>2月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>天体観測</li>
-                  <li>月例新年度準備</li>
-                </ul>
-              </div>
-              <div class="schedule-month">
-                <h4>3月</h4>
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem">
-                  <li>月例天体観測</li>
-                  <li>新入生勧誘準備</li>
-                </ul>
-              </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1933</div>
+            <div class="timeline-content">
+              <strong>天文同好会として創部</strong><br />
+              望遠鏡の寄贈を皮切りに、屋代高校天文班が「天文同好会」として正式に誕生した。
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1951</div>
+            <div class="timeline-content">
+              <strong>初代ドーム完成</strong><br />
+              望遠鏡のドームが完成。冬季の工事であったため、工事に苦心したと記録に残る。
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1967</div>
+            <div class="timeline-content">
+              <strong>設備更新への声</strong><br />
+              当時の鳩陵に「予算の関係上器具類は乏しく、せめて望遠鏡だけでも、もっといいものがあれば」と記されるなど、部員たちの切実な声が高まった。
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1992</div>
+            <div class="timeline-content">
+              <strong>現在の天文ドーム完成</strong><br />
+              県下の高校では最大級の天文ドームが完成。カラーステンレス平葺、直径4.5m、スリット開口幅1.3mという本格的な設備。口径150mm・焦点距離1.8mの屈折型望遠鏡・赤道儀も同時設置され、現在に至る。
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">現在</div>
+            <div class="timeline-content">
+              <strong>約60名が活動中</strong><br />
+              初心者から経験者まで幅広いメンバーが在籍。月例合宿・公開観測会・地域連携事業など、多彩な活動を展開している。
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- 入部案内 -->
-        <div class="card">
-          <h2 class="text-accent">入班をお考えの方へ</h2>
-          <p>
-            天文班では随時新入班員を募集しています。経験や知識は一切問いません。
-            「星が好き」「宇宙に興味がある」という気持ちがあれば大歓迎です。
-          </p>
-          <p>まずは気軽にご連絡ください。</p>
-          <div class="text-center mt-2">
-            <a href="contact.html" class="btn primary"
-              >入班についてお問い合わせ</a
-            >
+      <!-- 主な活動 -->
+      <div class="card mb-2">
+        <h2>主な活動</h2>
+        <ul style="margin-left: 1.4rem; margin-top: 0.8rem">
+          <li><strong>月例天文合宿</strong> — 毎月金曜〜土曜に学校天文ドームで実施</li>
+          <li><strong>戸隠夏合宿</strong> — 年に一度の大型合宿（7月下旬・1泊2日）</li>
+          <li><strong>公開星空観測会</strong> — 地域市民・小中学生向けイベントの企画・運営</li>
+          <li><strong>鳩祭展示</strong> — 学園祭でのプラネタリウム上映・天文展示</li>
+          <li><strong>研究発表</strong> — 県高校文化祭での研究成果発表</li>
+          <li><strong>地域交流事業</strong> — 小中学校への出張天文教室</li>
+        </ul>
+      </div>
+
+      <!-- 設備・機材 -->
+      <div class="card mb-2">
+        <h2>設備・機材</h2>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr>
+                <th>機材名</th>
+                <th>仕様</th>
+                <th>主な用途</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>天文ドーム</td>
+                <td>直径4.5m・スリット開口幅1.3m・自動回転式</td>
+                <td>本格的な天体観測</td>
+              </tr>
+              <tr>
+                <td>主力望遠鏡</td>
+                <td>口径150mm・焦点距離1.8m 屈折式 / 赤道儀搭載</td>
+                <td>惑星・月面・星雲観測</td>
+              </tr>
+              <tr>
+                <td>中型屈折望遠鏡</td>
+                <td>最大倍率約150倍 / 赤道儀付き</td>
+                <td>合宿・観測会での機動的観測</td>
+              </tr>
+              <tr>
+                <td>中型反射望遠鏡</td>
+                <td>口径30cm</td>
+                <td>合宿・観測会での観測</td>
+              </tr>
+              <tr>
+                <td>双眼鏡</td>
+                <td>各種複数</td>
+                <td>星座学習・彗星観測</td>
+              </tr>
+              <tr>
+                <td>デジタル一眼レフ</td>
+                <td>各種複数台</td>
+                <td>天体写真・タイムラプス撮影</td>
+              </tr>
+              <tr>
+                <td>プラネタリウム</td>
+                <td>小型投影機</td>
+                <td>鳩祭・地域イベント</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 年間スケジュール -->
+      <div class="card mb-2">
+        <h2>年間スケジュール</h2>
+        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:1rem">月例合宿は毎月実施。以下は代表的な年間行事です。</p>
+        <div class="schedule-container">
+          <div class="schedule-grid">
+            <div class="schedule-month">
+              <h4>4月</h4>
+              <ul>
+                <li>新入班員歓迎会</li>
+                <li>天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>5月</h4>
+              <ul>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>6月</h4>
+              <ul>
+                <li>月例天体観測</li>
+                <li>鳩祭準備</li>
+                <li>文化班展示</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>7月</h4>
+              <ul>
+                <li>月例天体観測</li>
+                <li>戸隠夏合宿</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>8月</h4>
+              <ul>
+                <li>公開星空観測会</li>
+                <li>天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>9月</h4>
+              <ul>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>10月</h4>
+              <ul>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>11月</h4>
+              <ul>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>12月</h4>
+              <ul>
+                <li>クリスマス合宿</li>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>1月</h4>
+              <ul>
+                <li>月例天体観測</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>2月</h4>
+              <ul>
+                <li>天体観測</li>
+                <li>新年度準備</li>
+              </ul>
+            </div>
+            <div class="schedule-month">
+              <h4>3月</h4>
+              <ul>
+                <li>月例天体観測</li>
+                <li>新入生勧誘準備</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- フッター -->
-    <footer>
-      <div class="footer-content">
-        <h3 class="text-accent">屋代高校 天文班</h3>
-        <p>〒387-8501 長野県千曲市屋代1000</p>
-
-        <!-- SNSアイコン（ダミーリンク） -->
-        <div class="social-links">
-          <a
-            href="https://x.com/ysr_astronomy"
-            aria-label="Twitter"
-            title="Twitter"
-            >🐦</a
-          >
-          <a
-            href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr"
-            aria-label="Instagram"
-            title="Instagram"
-            >📷</a
-          >
-          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
-        </div>
-
-        <p class="mt-2">
-          <small>
-            © 2025 屋代高校 天文班 |
-            <a href="#privacy" style="color: var(--text-muted)"
-              >プライバシーポリシー</a
-            >
-            |
-            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
-          </small>
-        </p>
       </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script src="js/stars.js"></script>
-    <script src="js/menu.js"></script>
-  </body>
+      <!-- 入班案内 -->
+      <div class="card hover-glow">
+        <h2>入班をお考えの方へ</h2>
+        <p>天文班では随時新入班員を募集しています。知識や経験は一切問いません。「星が好き」「宇宙が気になる」という気持ちさえあれば大歓迎です。</p>
+        <p style="margin-top:0.8rem;color:var(--text-muted);font-size:0.9rem">まずは気軽にご連絡ください。見学も随時受け付けています。</p>
+        <div class="text-center mt-2">
+          <a href="contact.html" class="btn secondary hover-glow">入班・見学のお問い合わせ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h3>屋代高校 天文班</h3>
+      <p style="color:var(--text-muted);font-size:0.82rem;margin-top:0.3rem">〒387-8501 長野県千曲市屋代1000</p>
+      <div class="social-links">
+        <a href="https://x.com/ysr_astronomy" aria-label="Twitter" title="Twitter">𝕏</a>
+        <a href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr" aria-label="Instagram" title="Instagram">◎</a>
+      </div>
+      <p class="mt-2"><small style="color:var(--text-muted)">© 2025 屋代高校 天文班　|　<a href="#privacy" style="color:var(--text-muted)">プライバシーポリシー</a></small></p>
+    </div>
+  </footer>
+
+  <script src="js/stars.js"></script>
+  <script src="js/menu.js"></script>
+</body>
 </html>

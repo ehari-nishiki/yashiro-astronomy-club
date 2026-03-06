@@ -4,71 +4,45 @@
     <meta charset="UTF-8" />
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-859JNM4HK6"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-859JNM4HK6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-859JNM4HK6");
     </script>
 
     <script>
       (function (d) {
-        var config = {
-            kitId: "wrj8jhe",
-            scriptTimeout: 3000,
-            async: true,
-          },
+        var config = { kitId: "wrj8jhe", scriptTimeout: 3000, async: true },
           h = d.documentElement,
           t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
           }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
+          tk = d.createElement("script"), f = false,
+          s = d.getElementsByTagName("script")[0], a;
         h.className += " wf-loading";
         tk.src = "https://use.typekit.net/" + config.kitId + ".js";
         tk.async = true;
         tk.onload = tk.onreadystatechange = function () {
           a = this.readyState;
           if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
+          f = true; clearTimeout(t);
+          try { Typekit.load(config); } catch (e) {}
         };
         s.parentNode.insertBefore(tk, s);
       })(document);
     </script>
 
     <title>屋代高校天文班</title>
-    <meta
-      name="description"
-      content="長野県屋代高校天文班の公式サイト。観測会の案内や活動記録、星空の魅力を発信しています。"
-    />
-    <meta
-      name="keywords"
-      content="屋代高校, 天文班, 観測会, 星空, 長野県, 天体観測, 星座, 科学, 教育,星空観測,天文,屋代,千曲"
-    />
+    <meta name="description" content="長野県屋代高校天文班の公式サイト。観測会の案内や活動記録、星空の魅力を発信しています。" />
+    <meta name="keywords" content="屋代高校, 天文班, 観測会, 星空, 長野県, 天体観測, 星座, 科学, 教育, 星空観測, 天文, 屋代, 千曲" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://yashiro-astronomy.org/" />
 
-    <!-- OGP / SNS共有 -->
     <meta property="og:title" content="屋代高校天文班" />
-    <meta
-      property="og:description"
-      content="月を見ること。それは地球の過去と未来を知ること。"
-    />
+    <meta property="og:description" content="月を見ること。それは地球の過去と未来を知ること。" />
     <meta property="og:image" content="https://yashiro-astronomy.org/ogp.jpg" />
     <meta property="og:url" content="https://yashiro-astronomy.org/" />
     <meta property="og:type" content="website" />
@@ -77,27 +51,15 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- 星空キャンバス -->
     <canvas id="starfield"></canvas>
 
-    <!-- ヘッダー -->
     <header>
       <div class="header-content">
         <a href="index.html" class="logo">屋代高校 天文班</a>
-
-        <!-- ハンバーガーメニューボタン -->
-        <button
-          class="menu-toggle"
-          aria-label="メニューを開く"
-          aria-expanded="false"
-        >
-          ☰
-        </button>
-
-        <!-- ナビゲーションメニュー -->
+        <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
         <nav class="nav-menu">
           <ul>
-            <li><a href="index.html">ホーム</a></li>
+            <li><a href="index.html" class="active">ホーム</a></li>
             <li><a href="about.html">天文班紹介</a></li>
             <li><a href="event.html">星空観測会</a></li>
             <li><a href="archive.html">過去の記録</a></li>
@@ -107,143 +69,114 @@
       </div>
     </header>
 
-    <!-- メインコンテンツ -->
     <main>
-      <!-- ヒーローセクション -->
+      <!-- ヒーロー -->
       <section class="hero">
-        <!-- ロゴ画像（仮置き） -->
         <img
           src="images/logo.png"
           alt="屋代高校 天文班"
           class="hero-logo"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
         />
-        <h1 style="display: none">屋代高校 天文班</h1>
-        <p>星空への情熱と探究心を胸に<br />宇宙の神秘を探求しよう</p>
+        <h1 style="display:none">屋代高校 天文班</h1>
+        <p>月を見ること。それは地球の過去と未来を知ること。</p>
+        <div class="hero-scroll">scroll</div>
       </section>
 
-      <!-- メインコンテンツカード -->
-      <section>
-        <h2 class="text-center text-accent mb-2">ようこそ、屋代高校天文班へ</h2>
+      <!-- 数字で見る天文班 -->
+      <div class="stats-strip">
+        <div class="stats-inner">
+          <div class="stat-item">
+            <span class="stat-num">1933</span>
+            <span class="stat-label">創部</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">60+</span>
+            <span class="stat-label">班員数</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">150<small style="font-size:0.55em">mm</small></span>
+            <span class="stat-label">主力望遠鏡口径</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">4.5<small style="font-size:0.55em">m</small></span>
+            <span class="stat-label">天文ドーム直径</span>
+          </div>
+        </div>
+      </div>
 
-        <!-- 4枚カード（2×2グリッド） -->
+      <!-- ナビゲーションカード -->
+      <section>
+        <h2 class="text-center text-accent mb-2">屋代高校天文班へようこそ</h2>
         <div class="grid grid-2x2">
-          <div class="card">
-            <h2>🌟 星空観測会</h2>
-            <p>
-              不定期に開催する一般向けの星空観測会。天文ドームでの本格的な天体観測をお楽しみいただけます。
-            </p>
-            <a href="event.html" class="btn secondary mt-1">詳細を見る</a>
+          <div class="card hover-glow">
+            <h2>星空観測会</h2>
+            <p>一般市民・小中学生を対象とした星空観測会を不定期開催。天文ドームでの本格的な天体観測をご体験いただけます。</p>
+            <a href="event.html" class="btn secondary mt-1 hover-glow">詳細を見る</a>
           </div>
-
-          <div class="card">
-            <h2>🔭 天文班紹介</h2>
-            <p>
-              60名の班員が在籍する活気ある天文班。初心者も大歓迎で、充実した設備と仲間たちがお待ちしています。入班希望者はこちらから。
-            </p>
-            <a href="about.html" class="btn secondary mt-1">詳細を見る</a>
+          <div class="card hover-glow">
+            <h2>天文班紹介</h2>
+            <p>創部1933年。60名を超える班員が活躍する歴史ある天文班。充実した設備と仲間たちが初心者を歓迎します。</p>
+            <a href="about.html" class="btn secondary mt-1 hover-glow">詳細を見る</a>
           </div>
-
-          <div class="card">
-            <h2>📸 過去の記録</h2>
-            <p>
-              これまでの観測会や合宿の様子をギャラリー形式でご紹介。天文班の活動の魅力をご覧ください。
-            </p>
-            <a href="archive.html" class="btn secondary mt-1">詳細を見る</a>
+          <div class="card hover-glow">
+            <h2>過去の記録</h2>
+            <p>これまでの観測会・合宿・研究発表の記録をギャラリー形式でご紹介。天文班の活動の軌跡をご覧ください。</p>
+            <a href="archive.html" class="btn secondary mt-1 hover-glow">詳細を見る</a>
           </div>
-
-          <div class="card">
-            <h2>✉️ お問い合わせ</h2>
-            <p>
-              入班希望や観測会参加について、お気軽にお問い合わせください。フォームかメールで承ります。
-            </p>
-            <a href="contact.html" class="btn secondary mt-1">詳細を見る</a>
+          <div class="card hover-glow">
+            <h2>お問い合わせ</h2>
+            <p>入班希望・観測会参加・地域連携など、天文班へのご相談はこちら。フォームまたはメールにてお気軽にどうぞ。</p>
+            <a href="contact.html" class="btn secondary mt-1 hover-glow">詳細を見る</a>
           </div>
         </div>
       </section>
 
-      <!-- ニュース欄 -->
+      <!-- 最新ニュース -->
       <section>
-        <h2 class="text-center text-accent mb-2">🗞️ 最新ニュース</h2>
+        <h2 class="text-center text-accent mb-2">最新ニュース</h2>
         <div class="card">
-          <ul id="news-list" class="news-list">
-            <!-- JavaScriptで動的に挿入 -->
-          </ul>
+          <ul id="news-list" class="news-list"></ul>
         </div>
       </section>
 
-      <!-- 活動紹介 -->
+      <!-- 主な活動 -->
       <section>
-        <h2 class="text-center text-accent mb-2">主な活動内容</h2>
-        <div class="grid">
-          <div class="card">
+        <h2 class="text-center text-accent mb-2">主な活動</h2>
+        <div class="grid grid-2x2">
+          <div class="card hover-glow">
             <h3>月例天文合宿</h3>
-            <p>
-              毎月一回金曜日に学校の天文ドームで合宿を実施。季節の星座観測や天体写真撮影を行います。
-            </p>
+            <p>毎月金曜〜土曜に学校の天文ドームで実施。季節の星座観測から天体写真撮影まで、夜通し宇宙と向き合います。</p>
           </div>
-
-          <div class="card">
-            <h3>戸隠合宿</h3>
-            <p>
-              年に一度の大型合宿。戸隠高原の澄んだ空で本格的な天体観測を体験します。
-            </p>
+          <div class="card hover-glow">
+            <h3>戸隠夏合宿</h3>
+            <p>年一度、7月下旬に戸隠高原へ。光害のない澄んだ空のもと、班員全員で1泊2日の本格的な天体観測を行います。</p>
           </div>
-
-          <div class="card">
-            <h3>地域連携事業</h3>
-            <p>
-              小中学生向けの天文教室や市民講座を開催。地域の皆様と天文の楽しさを共有しています。
-            </p>
+          <div class="card hover-glow">
+            <h3>公開星空観測会</h3>
+            <p>地域の小中学生や保護者を招いて開催する公開イベント。天文ドームや複数の望遠鏡を使い、宇宙の魅力を伝えます。</p>
+          </div>
+          <div class="card hover-glow">
+            <h3>鳩祭・地域連携</h3>
+            <p>学園祭でのプラネタリウム上映、小中学校への出張天文教室など、天文の楽しさを地域全体と共有する活動も担います。</p>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- フッター -->
     <footer>
       <div class="footer-content">
-        <h3 class="text-accent">屋代高校 天文班</h3>
-        <p>〒387-8501 長野県千曲市屋代1000</p>
-
-        <!-- SNSアイコン（ダミーリンク） -->
+        <h3>屋代高校 天文班</h3>
+        <p style="color:var(--text-muted);font-size:0.82rem;margin-top:0.3rem">〒387-8501 長野県千曲市屋代1000</p>
         <div class="social-links">
-          <a
-            href="https://x.com/ysr_astronomy"
-            aria-label="Twitter"
-            title="Twitter"
-            >🐦</a
-          >
-          <a
-            href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr"
-            aria-label="Instagram"
-            title="Instagram"
-            >📷</a
-          >
-          <a href="#" aria-label="YouTube" title="YouTube">📹</a>
+          <a href="https://x.com/ysr_astronomy" aria-label="Twitter" title="Twitter">𝕏</a>
+          <a href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr" aria-label="Instagram" title="Instagram">◎</a>
         </div>
-
-        <p class="mt-2">
-          <small>
-            © 2025 屋代高校 天文班 |
-            <a href="#privacy" style="color: var(--text-muted)"
-              >プライバシーポリシー</a
-            >
-            |
-            <a href="#terms" style="color: var(--text-muted)">利用規約</a>
-          </small>
-        </p>
-
-        <p class="mt-1">
-          <small style="color: var(--text-muted)">
-            当サイトに掲載されている情報の無断転載を禁じます。<br />
-            個人情報の取り扱いについては、お問い合わせ時にご説明いたします。
-          </small>
-        </p>
+        <p class="mt-2"><small style="color:var(--text-muted)">© 2025 屋代高校 天文班　|　<a href="#privacy" style="color:var(--text-muted)">プライバシーポリシー</a></small></p>
+        <p style="margin-top:0.5rem"><small style="color:var(--text-muted);font-size:0.75rem">当サイトに掲載されている情報の無断転載を禁じます。</small></p>
       </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/stars.js"></script>
     <script src="js/news.js"></script>
     <script src="js/menu.js"></script>
