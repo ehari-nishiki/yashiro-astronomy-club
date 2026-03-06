@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yashiro-astronomy.org/sitemap.xml

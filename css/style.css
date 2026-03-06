@@ -4,7 +4,7 @@
    Fonts
    Zen Kaku Gothic New: モダンで品のある日本語ゴシック
 ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+/* Google Fonts loaded via <link> in HTML for better performance */
 
 /* =========================================
    CSS変数
