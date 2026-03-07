@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ehari-nishiki/yashiro-astronomy-club
   branch: main
-  base_url: https://venerable-otter-2c63d0.netlify.app
+  base_url: https://api.netlify.com
 
 media_folder: images/archive
 public_folder: images/archive
