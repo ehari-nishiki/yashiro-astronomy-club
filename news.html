@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-859JNM4HK6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-859JNM4HK6');
+  </script>
+
+  <script>
+    (function (d) {
+      var config = { kitId: "wrj8jhe", scriptTimeout: 3000, async: true },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"), f = false,
+        s = d.getElementsByTagName("script")[0], a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true; clearTimeout(t);
+        try { Typekit.load(config); } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" />
+
+  <!-- Primary Meta Tags -->
+  <title>最新情報・お知らせ | 屋代高校天文班</title>
+  <meta name="description" content="屋代高校天文班の最新ニュース・お知らせ一覧。公開星空観測会・戸隠夏合宿・鳩祭など活動情報を随時更新しています。" />
+  <meta name="keywords" content="屋代高校天文班, ニュース, お知らせ, 最新情報, 星空観測会, 戸隠合宿, 鳩祭, 天文班" />
+  <meta name="author" content="屋代高校天文班" />
+  <meta name="theme-color" content="#020c1b" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yashiro-astronomy.org/news.html" />
+  <link rel="sitemap" type="application/xml" href="https://yashiro-astronomy.org/sitemap.xml" />
+
+  <!-- Open Graph / SNS -->
+  <meta property="og:site_name" content="屋代高校天文班" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yashiro-astronomy.org/news.html" />
+  <meta property="og:title" content="最新情報・お知らせ | 屋代高校天文班" />
+  <meta property="og:description" content="屋代高校天文班の最新ニュース・お知らせ。観測会・合宿・行事情報を随時更新。" />
+  <meta property="og:image" content="https://yashiro-astronomy.org/ogp.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ysr_astronomy" />
+  <meta name="twitter:title" content="最新情報・お知らせ | 屋代高校天文班" />
+  <meta name="twitter:description" content="屋代高校天文班の最新ニュース・お知らせ。観測会・合宿・行事情報を随時更新。" />
+  <meta name="twitter:image" content="https://yashiro-astronomy.org/ogp.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "url": "https://yashiro-astronomy.org/news.html",
+        "name": "最新情報・お知らせ | 屋代高校天文班",
+        "description": "屋代高校天文班の最新ニュース・お知らせ一覧。観測会・合宿・行事情報を随時更新。",
+        "inLanguage": "ja",
+        "isPartOf": {"@id": "https://yashiro-astronomy.org/#website"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://yashiro-astronomy.org/"},
+          {"@type": "ListItem", "position": 2, "name": "お知らせ", "item": "https://yashiro-astronomy.org/news.html"}
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "屋代高校天文班 最新ニュース",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "第3回公開星空観測会を開催（2025年8月4日）"},
+          {"@type": "ListItem", "position": 2, "name": "戸隠夏合宿を実施（2025年7月25〜26日）"},
+          {"@type": "ListItem", "position": 3, "name": "鳩祭にてプラネタリウム上映を実施（2025年6月）"},
+          {"@type": "ListItem", "position": 4, "name": "クリスマス合宿を実施（2024年12月）"},
+          {"@type": "ListItem", "position": 5, "name": "公開星空観測会を開催（2024年8月）"}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <canvas id="starfield"></canvas>
+
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">屋代高校 天文班</a>
+      <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">天文班紹介</a></li>
+          <li><a href="join.html">入班案内</a></li>
+          <li><a href="event.html">星空観測会</a></li>
+          <li><a href="news.html" class="active">お知らせ</a></li>
+          <li><a href="archive.html">過去の記録</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="text-center text-accent mb-2">最新情報・お知らせ</h1>
+
+      <div class="notice-banner mb-2">
+        <span class="notice-icon">ℹ</span>
+        <span>このページでは、天文班の活動に関するお知らせを随時掲載しています。最新情報はSNS（X・Instagram）でも発信中です。</span>
+      </div>
+
+      <!-- 2025年のニュース -->
+      <div class="card mb-2">
+        <h2>2025年のニュース</h2>
+        <ul class="news-list" style="margin-top:0.8rem">
+          <li>
+            <time>2025-08-04</time>
+            <strong class="news-title">第3回公開星空観測会を開催</strong>
+            <p class="news-body">屋代高校天文ドームにて第3回公開星空観測会を開催しました。小中学生と保護者12組が参加し、天文ドームでの本格的な惑星観測や、屋上での星座案内、班員によるプラネタリウム解説を楽しんでいただきました。ご参加いただいた皆様、ありがとうございました。</p>
+          </li>
+          <li>
+            <time>2025-07-25</time>
+            <strong class="news-title">戸隠夏合宿を実施</strong>
+            <p class="news-body">7月25〜26日に長野県戸隠高原にて年次夏合宿を実施しました。光害の少ない澄んだ空のもと、班員全員で天の川撮影や夏の星座観測を行い、天体写真を多数撮影しました。</p>
+          </li>
+          <li>
+            <time>2025-06</time>
+            <strong class="news-title">鳩祭にてプラネタリウム上映を実施</strong>
+            <p class="news-body">屋代高校の学園祭「鳩祭」にて、天文班がプラネタリウム上映と天文展示を行いました。約150名の来場者に宇宙の魅力をお伝えすることができました。</p>
+          </li>
+          <li>
+            <time>2025-04</time>
+            <strong class="news-title">新入班員を迎えて活動スタート</strong>
+            <p class="news-body">2025年度の新入班員を迎え、歓迎観測会を開催しました。初めて望遠鏡を覗く班員も、春の星座の美しさに感動していました。今年度もさまざまな活動を展開していきます。</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 2024年のニュース -->
+      <div class="card mb-2">
+        <h2>2024年のニュース</h2>
+        <ul class="news-list" style="margin-top:0.8rem">
+          <li>
+            <time>2024-12</time>
+            <strong class="news-title">クリスマス合宿を実施</strong>
+            <p class="news-body">12月のクリスマス合宿では、冬の大三角や星団・星雲の観測を実施。観測後は班員で交流を深める恒例行事となっています。</p>
+          </li>
+          <li>
+            <time>2024-08</time>
+            <strong class="news-title">公開星空観測会を開催</strong>
+            <p class="news-body">2024年8月に公開星空観測会を開催しました。地域の小中学生と保護者の方々に、天文ドームでの本格観測をご体験いただきました。</p>
+          </li>
+          <li>
+            <time>2024-07</time>
+            <strong class="news-title">戸隠夏合宿を実施</strong>
+            <p class="news-body">戸隠高原での夏合宿を実施。天の川銀河の撮影に成功し、班員の天体写真スキルが大きく向上した合宿となりました。</p>
+          </li>
+          <li>
+            <time>2024-04</time>
+            <strong class="news-title">2024年度活動開始</strong>
+            <p class="news-body">新入班員を迎え、2024年度の活動を開始しました。今年度は月例合宿12回・公開観測会1回・戸隠合宿1回を実施しました。</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- フッターCTA -->
+      <div class="card hover-glow">
+        <p style="text-align:center;color:var(--text-sub);line-height:2">
+          観測会への参加申し込みや入班に関するご質問は、お問い合わせページからお気軽にどうぞ。
+        </p>
+        <div class="text-center mt-2" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="event.html" class="btn secondary hover-glow">星空観測会を見る</a>
+          <a href="contact.html" class="btn primary hover-glow">お問い合わせ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h3>屋代高校 天文班</h3>
+      <p style="color:var(--text-muted);font-size:0.82rem;margin-top:0.3rem">〒387-8501 長野県千曲市屋代1000</p>
+      <div class="social-links">
+        <a href="https://x.com/ysr_astronomy" aria-label="Twitter" title="Twitter">𝕏</a>
+        <a href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr" aria-label="Instagram" title="Instagram">◎</a>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">天文班紹介</a></li>
+          <li><a href="event.html">星空観測会</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="archive.html">過去の記録</a></li>
+          <li><a href="join.html">入班案内</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+      <p><small style="color:var(--text-muted)">© 2025 屋代高校 天文班</small></p>
+    </div>
+  </footer>
+
+  <script src="js/stars.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

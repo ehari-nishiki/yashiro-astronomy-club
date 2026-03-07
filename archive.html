@@ -104,7 +104,9 @@
         <ul>
           <li><a href="index.html">ホーム</a></li>
           <li><a href="about.html">天文班紹介</a></li>
+          <li><a href="join.html">入班案内</a></li>
           <li><a href="event.html">星空観測会</a></li>
+          <li><a href="news.html">お知らせ</a></li>
           <li><a href="archive.html" class="active">過去の記録</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
@@ -119,7 +121,7 @@
       <!-- 活動実績 -->
       <div class="card mb-2">
         <h2>活動実績</h2>
-        <div class="stats-inner" style="padding:0;grid-template-columns:repeat(2,1fr);margin-top:0.5rem">
+        <div class="stats-inner" style="padding:0;margin-top:0.5rem">
           <div class="stat-item">
             <span class="stat-num">10+</span>
             <span class="stat-label">年間観測会数</span>
@@ -139,99 +141,8 @@
         </div>
       </div>
 
-      <!-- 2024年度活動 -->
-      <div class="card mb-2">
-        <h2>2024年度の活動</h2>
-        <div class="gallery">
-          <figure>
-            <img src="images/archive/sample1.jpg" alt="戸隠夏合宿 2024"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>戸隠夏合宿 2024</strong><br />
-              1泊2日の本格的な天体観測合宿
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="流星群観測"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample3.jpg" alt="鳩祭天文展示"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>鳩祭天文展示</strong><br />
-              プラネタリウム上映
-            </figcaption>
-          </figure>
-          <figure style="grid-row:span 2">
-            <img src="images/archive/sample1.jpg" alt="調整中"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="天体写真"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample3.jpg" alt="歓迎会"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <!-- 2023年度活動 -->
-      <div class="card mb-2">
-        <h2>2023年度の活動</h2>
-        <div class="gallery">
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="戸隠合宿 2023"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample1.jpg" alt="日食観測"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure style="grid-row:span 2">
-            <img src="images/archive/sample3.jpg" alt="県大会発表"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-          <figure>
-            <img src="images/archive/sample2.jpg" alt="地域交流"
-              onerror="this.parentElement.style.background='var(--glass-bg)';this.style.display='none';" />
-            <figcaption>
-              <strong>調整中</strong><br />
-              調整中
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+      <!-- ギャラリー（gallery.js が data/archive.json から動的生成） -->
+      <div id="gallery-mount"></div>
 
       <!-- フッターCTA -->
       <div class="card hover-glow">
@@ -254,11 +165,24 @@
         <a href="https://x.com/ysr_astronomy" aria-label="Twitter" title="Twitter">𝕏</a>
         <a href="https://www.instagram.com/yashiro.astronomy_team?igsh=MXRmcGVlZHBseWh1ag%3D%3D&utm_source=qr" aria-label="Instagram" title="Instagram">◎</a>
       </div>
-      <p class="mt-2"><small style="color:var(--text-muted)">© 2025 屋代高校 天文班　|　<a href="#privacy" style="color:var(--text-muted)">プライバシーポリシー</a></small></p>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="about.html">天文班紹介</a></li>
+          <li><a href="event.html">星空観測会</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="archive.html">過去の記録</a></li>
+          <li><a href="join.html">入班案内</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+      <p><small style="color:var(--text-muted)">© 2025 屋代高校 天文班</small></p>
     </div>
   </footer>
 
   <script src="js/stars.js"></script>
+  <script src="js/gallery.js"></script>
   <script src="js/menu.js"></script>
 </body>
 </html>
