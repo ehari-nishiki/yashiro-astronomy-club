@@ -5,7 +5,7 @@ backend:
   base_url: https://api.netlify.com
 
 media_folder: images/archive
-public_folder: images/archive
+public_folder: /images/archive
 
 collections:
   - name: archive

@@ -5,35 +5,35 @@
       "summary": "8月に第3回公開星空観測会を開催（12組参加）、7月の戸隠夏合宿では天の川撮影に成功。6月の鳩祭ではプラネタリウム上映を行い約150名が来場するなど、対外活動も充実した一年でした。",
       "photos": [
         {
-          "src": "images/archive/sample2.jpg",
+          "src": "/images/archive/sample2.jpg",
           "alt": "戸隠夏合宿 2025",
           "title": "戸隠夏合宿 2025",
           "caption": "7月25〜26日・戸隠高原で天の川を撮影",
           "wide": false
         },
         {
-          "src": "images/archive/sample3.jpg",
+          "src": "/images/archive/sample3.jpg",
           "alt": "鳩祭天文展示 2025",
           "title": "鳩祭天文展示 2025",
           "caption": "プラネタリウム上映・約150名が来場",
           "wide": false
         },
         {
-          "src": "images/archive/sample1.jpg",
+          "src": "/images/archive/sample1.jpg",
           "alt": "月例天文合宿",
           "title": "月例天文合宿",
           "caption": "天文ドームで惑星・星団を観測",
           "wide": true
         },
         {
-          "src": "images/archive/sample2.jpg",
+          "src": "/images/archive/sample2.jpg",
           "alt": "天体写真撮影",
           "title": "天体写真撮影",
           "caption": "デジタル一眼による星野写真",
           "wide": false
         },
         {
-          "src": "images/archive/sample3.jpg",
+          "src": "/images/archive/sample3.jpg",
           "alt": "新入班員歓迎観測会",
           "title": "新入班員歓迎観測会",
           "caption": "4月・春の星座を初めての班員と一緒に",
@@ -42,7 +42,7 @@
         {
           "wide": true,
           "title": "冬の星座",
-          "src": "images/archive/result_1072s-2.jpg",
+          "src": "/images/archive/result_1072s-2.jpg",
           "alt": "picture,space,winter",
           "caption": "冬の星座を撮影しました！"
         }
