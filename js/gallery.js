@@ -8,7 +8,7 @@
 
   let data;
   try {
-    const res = await fetch('data/archive.json');
+    const res = await fetch('/data/archive.json');
     if (!res.ok) throw new Error('fetch failed');
     data = await res.json();
   } catch (e) {
