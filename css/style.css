@@ -103,7 +103,7 @@ header {
   color: var(--text-main);
   text-decoration: none;
   letter-spacing: 0.16em;
-  white-space: nowrap;
+  word-break: keep-all;
   display: flex;
   align-items: center;
   gap: 0.55rem;
