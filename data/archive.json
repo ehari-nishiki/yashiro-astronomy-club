@@ -5,13 +5,6 @@
       "summary": "8月に第3回公開星空観測会を開催（12組参加）、7月の戸隠夏合宿では天の川撮影に成功。6月の鳩祭ではプラネタリウム上映を行い約150名が来場するなど、対外活動も充実した一年でした。",
       "photos": [
         {
-          "src": "images/archive/sample1.jpg",
-          "alt": "第3回公開星空観測会 2025",
-          "title": "第3回公開星空観測会 2025",
-          "caption": "8月4日開催・12組の親子が天文ドームで観測",
-          "wide": false
-        },
-        {
           "src": "images/archive/sample2.jpg",
           "alt": "戸隠夏合宿 2025",
           "title": "戸隠夏合宿 2025",
@@ -45,6 +38,13 @@
           "title": "新入班員歓迎観測会",
           "caption": "4月・春の星座を初めての班員と一緒に",
           "wide": false
+        },
+        {
+          "wide": true,
+          "title": "冬の星座",
+          "src": "images/archive/result_1072s-2.jpg",
+          "alt": "picture,space,winter",
+          "caption": "冬の星座を撮影しました！"
         }
       ]
     },
