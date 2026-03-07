@@ -4,7 +4,6 @@ backend:
   branch: main
   base_url: https://venerable-otter-2c63d0.netlify.app
 
-site_url: https://yashiro-astronomy.org
 media_folder: images/archive
 public_folder: images/archive
 
