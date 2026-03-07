@@ -1,108 +1,53 @@
-# ============================================================
-#  Decap CMS 設定ファイル — 屋代高校天文班
-#  管理画面: https://yashiro-astronomy.org/admin/
-#
-#  【初回セットアップ手順】
-#  1. GitHub OAuth App を作成
-#     https://github.com/settings/developers → "New OAuth App"
-#     - Application name: 屋代天文班CMS
-#     - Homepage URL: https://yashiro-astronomy.org
-#     - Callback URL: https://api.netlify.com/auth/done
-#  2. 無料 Netlify サイトを作成（デプロイ不要、OAuth proxy のみに使用）
-#     https://app.netlify.com → "Sites" → "Add new site" → "Deploy manually"
-#     空ファイルをアップロードするだけでOK
-#  3. Netlify サイトの Settings → Access control → OAuth → Install provider: GitHub
-#     Client ID / Client Secret を手順1で取得した値で入力
-#  4. 下記 base_url を作成した Netlify サイトの URL に変更
-#     例: base_url: https://peaceful-fox-123abc.netlify.app
-# ============================================================
-
 backend:
   name: github
   repo: ehari-nishiki/yashiro-astronomy-club
   branch: main
   base_url: https://venerable-otter-2c63d0.netlify.app
 
-# 画像アップロード先
+site_url: https://yashiro-astronomy.org
 media_folder: images/archive
 public_folder: images/archive
 
-# 管理画面の言語
-locale: ja
-
-# ============================================================
-#  コレクション定義
-# ============================================================
 collections:
-
-  # 活動記録ギャラリー
   - name: archive
-    label: 活動記録・写真
+    label: "活動記録・写真"
     files:
-      - label: ギャラリーデータ
+      - label: "ギャラリーデータ"
         name: gallery
         file: data/archive.json
         fields:
-          - label: 年度別データ
+          - label: "年度別データ"
             name: years
             widget: list
-            label_singular: 年度
+            label_singular: "年度"
             summary: "{{fields.year}}年度"
             fields:
-              - label: 年度
+              - label: "年度"
                 name: year
                 widget: string
-                hint: "例: 2024"
-              - label: 年度概要
+              - label: "年度概要"
                 name: summary
                 widget: text
-                hint: "その年度の活動をまとめた説明文（2〜3文程度）"
-              - label: 写真一覧
+              - label: "写真一覧"
                 name: photos
                 widget: list
-                label_singular: 写真
+                label_singular: "写真"
                 summary: "{{fields.title}}"
                 fields:
-                  - label: タイトル
+                  - label: "タイトル"
                     name: title
                     widget: string
-                    hint: "例: 戸隠夏合宿 2024"
-                  - label: 説明文
+                  - label: "説明文"
                     name: caption
                     widget: string
-                    hint: "例: 7月下旬・戸隠高原で天の川を撮影"
-                  - label: 写真ファイル
+                  - label: "写真ファイル"
                     name: src
                     widget: image
-                    hint: "images/archive/ にアップロードされます"
-                  - label: alt テキスト
+                  - label: "alt テキスト"
                     name: alt
                     widget: string
-                    hint: "画像の内容説明（SEO・アクセシビリティ用）"
-                  - label: 大きめ表示（縦2マス）
+                  - label: "大きめ表示"
                     name: wide
                     widget: boolean
                     default: false
                     required: false
-                    hint: "ON にすると縦長の大きいサイズで表示されます"
-
-  # お知らせ（将来的に news.html を動的化する場合に使用）
-  - name: news
-    label: お知らせ
-    folder: data/news
-    create: true
-    slug: "{{year}}-{{month}}-{{slug}}"
-    summary: "{{fields.date}} — {{fields.title}}"
-    fields:
-      - label: 公開日
-        name: date
-        widget: datetime
-        format: "YYYY-MM-DD"
-        time_format: false
-      - label: タイトル
-        name: title
-        widget: string
-      - label: 本文
-        name: body
-        widget: text
-        hint: "2〜3文程度の説明"
