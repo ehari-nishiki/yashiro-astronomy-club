@@ -2,7 +2,7 @@
   "years": [
     {
       "year": "2025",
-      "summary": "8月に第3回公開星空観測会を開催（12組参加）、7月の戸隠夏合宿では天の川撮影に成功。6月の鳩祭ではプラネタリウム上映を行い約150名が来場するなど、対外活動も充実した一年でした。",
+      "summary": "新入班員が大幅に増え、赤道儀の自動追尾システムも改修しました。8月に第3回公開星空観測会を開催（12組参加）。多岐にわたる活動を行いました！",
       "photos": [
         {
           "src": "/images/archive/sample2.jpg",
@@ -19,32 +19,18 @@
           "wide": false
         },
         {
-          "src": "/images/archive/sample1.jpg",
-          "alt": "月例天文合宿",
-          "title": "月例天文合宿",
-          "caption": "天文ドームで惑星・星団を観測",
-          "wide": true
-        },
-        {
-          "src": "/images/archive/sample2.jpg",
-          "alt": "天体写真撮影",
-          "title": "天体写真撮影",
-          "caption": "デジタル一眼による星野写真",
-          "wide": false
-        },
-        {
-          "src": "/images/archive/sample3.jpg",
-          "alt": "新入班員歓迎観測会",
-          "title": "新入班員歓迎観測会",
-          "caption": "4月・春の星座を初めての班員と一緒に",
-          "wide": false
-        },
-        {
           "wide": true,
           "title": "冬の星座",
           "src": "/images/archive/result_1072s-2.jpg",
           "alt": "picture,space,winter",
           "caption": "冬の星座を撮影しました！"
+        },
+        {
+          "wide": true,
+          "title": "オリオン大星雲 (M42)",
+          "caption": "オリオン大星雲を撮影しました！",
+          "src": "/images/archive/r_pp_lightsfits_stacked.jpg",
+          "alt": "m42"
         }
       ]
     },
